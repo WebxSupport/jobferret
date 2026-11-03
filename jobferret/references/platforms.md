@@ -18,7 +18,7 @@ Every claim carries the date it was checked (2026-11-03) and a source. "Unverifi
 
 | Item | Claude Code | Codex (CLI, desktop app, IDE extension) |
 |---|---|---|
-| Install path, user | `~/.claude/skills/jobferret/` | `~/.agents/skills/jobferret/` (not `~/.codex/skills`) |
+| Install path, user | `~/.claude/skills/jobferret/` | `~/.agents/skills/jobferret/` (some bundled installers use `$CODEX_HOME/skills`) |
 | Install path, repo | `<repo>/.claude/skills/jobferret/` | `<repo>/.agents/skills/jobferret/`; Codex scans every level from the working directory up to the repo root |
 | Other locations | Plugin `skills/`, enterprise managed dir, `--add-dir` | `/etc/codex/skills` (admin), bundled system skills (`skill-creator`, `skill-installer`) |
 | Required `SKILL.md` keys | None required; `description` strongly advised | `name` and `description` both required |
@@ -110,23 +110,23 @@ Codex (checked 2026-11-03):
 - Per repo: `<repo>/.agents/skills/jobferret/`.
 - Codex does not merge two skills with the same `name`; both show in the selector. Remove the old copy when updating.
 
-One command, per OS (run from the folder that contains `jobferret/`):
+Recommended from a repository checkout or extracted repository ZIP (Python 3.11+, no network or third-party libraries needed for the copy step):
 
-```
-# macOS / Linux, both hosts, symlink so updates apply everywhere
-mkdir -p ~/.claude/skills ~/.agents/skills
-ln -s "$PWD/jobferret" ~/.claude/skills/jobferret
-ln -s "$PWD/jobferret" ~/.agents/skills/jobferret
-```
-
-```
-# Windows PowerShell, copy (symlinks need developer mode or admin)
-New-Item -ItemType Directory -Force "$HOME\.claude\skills","$HOME\.agents\skills" | Out-Null
-Copy-Item -Recurse -Force .\jobferret "$HOME\.claude\skills\jobferret"
-Copy-Item -Recurse -Force .\jobferret "$HOME\.agents\skills\jobferret"
+```sh
+python install.py --host codex --scope project
+# Or, for Claude Code:
+python install.py --host claude --scope project
 ```
 
-Then install the Python libraries once: `pip install -r scripts/requirements.txt` (Python 3.11+).
+Run from the repository root containing `install.py` and `jobferret/`. On macOS/Linux use `python3` if needed; Windows can use `py -3`. The default target is the current project. Use `--project "path/to/project"` for a different project, or `--scope user` for a personal installation. Open the target project in the host app. The installer preserves existing installations and prints the exact dependency-install command. Move an old copy out of the skills directory before installing a replacement; do not copy into an existing `jobferret` folder, which can add an unwanted extra directory level.
+
+If only the skill folder is available (for example from a skill-only ZIP), manually copy it to one of the locations above, ensuring `skills/jobferret/SKILL.md` exists directly. Install dependencies using `python -m pip install -r "<installed-skill-path>/scripts/requirements.txt"` with the same Python interpreter.
+
+A blocked personal directory does not rule out a project install. Check the current session's actual writable roots; use an authorized project location when available. A missing directory can be created if permitted. Do not change permission settings to work around a restriction. If no permitted destination exists, give the local-terminal installation steps rather than asking for a ZIP as though that would grant write access.
+
+If GitHub is unreachable in the session, reuse a local checkout or an attached archive if available. Otherwise provide the [repository ZIP download](https://github.com/WebxSupport/jobferret/archive/refs/heads/main.zip) and the terminal steps in the [repository README](../../README.md#install). An allowed browser download may work when shell network access does not; do not assume this without checking available tools. If no download route exists, report that restriction accurately.
+
+Local Claude Code and Codex installations differ from a hosted chat's upload interface. A chat attachment is not proof of persistent skill installation. Maintainers can build a clean skill-only archive with `python install.py --bundle dist/jobferret.zip` from a checkout; hosted execution, dependencies and persistence must be checked separately.
 
 Codex extras:
 - Web search is on in `cached` mode by default. For live pages set `web_search = "live"` in `~/.codex/config.toml`, or leave it and fetch with the shell.
@@ -152,9 +152,9 @@ Codex:
 1. Open a new thread (CLI: restart; skills are listed at start). Type `$` or run `/skills`. `jobferret` should appear.
 2. Ask "list your skills and their descriptions".
 3. Run `$jobferret setup`.
-If missing: the folder is under `~/.codex/skills` (wrong, use `~/.agents/skills`), `name` or `description` is missing from `SKILL.md`, or `skills.config` in `config.toml` disables it (`enabled = false` entries; the last matching rule wins). If many skills are installed, the catalog budget may truncate descriptions; raise `skills.max_context_tokens`.
+If missing: confirm the actual installation destination and the host's configured skill locations. Current documented local locations use `.agents/skills`; some bundled installers default to `$CODEX_HOME/skills` (usually `~/.codex/skills`), so that path alone is not evidence of failure. Also check whether `name` or `description` is missing from `SKILL.md`, or `skills.config` in `config.toml` disables it (`enabled = false` entries; the last matching rule wins). If many skills are installed, the catalog budget may truncate descriptions; raise `skills.max_context_tokens`.
 
-Whether Codex hot-reloads a newly added skill mid-thread is unverified; restart the session.
+Current Codex docs say skill changes are detected automatically. If the skill does not appear, restart the session.
 
 ## 5. Chat exports (read by `memory_import.py`)
 
@@ -232,7 +232,7 @@ policy:
 - Whether Indeed's MCP connector (`https://mcp.indeed.com/claude/mcp`) can be reached from Claude Code (05 finding 8).
 - Whether the "in-app browser" in the Codex app and the "built-in browser" in the ChatGPT desktop app are one component. The upload limit (cannot automate uploads) is from the browser page; the per-origin `browser_use.*` config keys are in the config reference.
 - A documented WebFetch-style tool for Codex. None found; `web_search` is the only built-in web tool listed.
-- Whether Codex hot-reloads skills added mid-session.
+- Codex docs now confirm automatic skill-change detection; host-specific live invocation has not been tested here.
 - The full `web_search` value list beyond `disabled | cached | indexed | live` and whether a `--search` CLI flag exists (the config page does not mention one).
 - Names of files inside Codex `memories/` and `memories_v2/`; the on-disk rollout/transcript subpath; regional availability of memories (the EEA, UK and Switzerland note came from a search summary).
 - Scheduling in the Codex CLI itself. App automations and `codex exec` from an OS scheduler come from OpenAI's academy page (April 2026) and secondary posts; the official non-interactive page has no scheduling section.

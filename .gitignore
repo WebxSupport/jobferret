@@ -24,3 +24,8 @@ htmlcov/
 /jobferret/Export
 .DS_Store
 Thumbs.db
+
+# Local skill installations and generated distribution packages
+/.agents/
+/.claude/
+/dist/

@@ -14,10 +14,12 @@ All ten modes are built: `start`, `setup`, `profile`, `cv-audit`, `apply`, `hunt
 
 Requirements: Python 3.11+ and `pip install -r scripts/requirements.txt`. For PDF export, Microsoft Word (Windows or macOS) or LibreOffice. For form filling, one of: the Claude in Chrome extension (your real browser, your logins), a Playwright MCP server, the Codex Chrome extension, or a built-in browser pane for reading.
 
+For a repository checkout or extracted repository ZIP, use the offline installer from the repository root: `python install.py --host codex` or `python install.py --host claude`. It defaults to a project-local install and prints the next steps. See the [repository installation guide](../README.md#install) for downloading, choosing a project, personal installation, ZIP packaging and restricted-session recovery. The installer is a repository tool; it is not included in the skill-only ZIP.
+
 Copy or symlink this whole folder:
 
 - Claude Code: `~/.claude/skills/jobferret/` (personal) or `<project>/.claude/skills/jobferret/`.
-- Codex: `~/.agents/skills/jobferret/` (not `~/.codex/skills`) or `<repo>/.agents/skills/jobferret/`.
+- Codex: `~/.agents/skills/jobferret/` or `<repo>/.agents/skills/jobferret/`. Some bundled installers use `$CODEX_HOME/skills`; use their documented destination or pass an explicit project destination rather than assuming that folder must exist.
 
 `references/platforms.md` has the one-line commands for each OS, how to check the skill loaded, and what differs between the two hosts.
 
