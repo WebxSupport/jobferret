@@ -1,0 +1,26 @@
+# Local evaluation runs and datasets
+/jobferret-workspace/
+
+# Python environments, bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+
+# Credentials and personal runtime data
+.env
+.env.*
+!.env.example
+.jobferret/
+
+# Generated render outputs; source layout fixtures remain tracked
+/jobferret/scripts/tests/fixtures/sample-cv-uk.docx
+/jobferret/scripts/tests/fixtures/sample-cv-uk.pdf
+
+# Empty desktop export placeholder and OS files
+/jobferret/Export
+.DS_Store
+Thumbs.db

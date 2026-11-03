@@ -1,0 +1,46 @@
+# JobFerret settings. Written by setup and the preferences page; safe to edit by hand.
+# locale.default: uk | us. browser.preferred: chrome | playwright | pane.
+
+[locale]
+default = "uk"
+
+[browser]
+preferred = "chrome"
+
+[limits]
+daily_applications = 15
+hard_cap = 25
+per_employer_days = 30
+
+[paths]
+user_dir = "~/.jobferret"
+
+[sources]
+enabled = ["adzuna", "reed", "nhs", "teaching", "boards", "rss", "alerts"]
+
+[sources.adzuna]
+app_id = ""
+app_key = ""
+
+[sources.reed]
+api_key = ""
+
+[sources.rss]
+feeds = ["https://jobs.example.ac.uk/feed", "https://www.cwjobs.co.uk/jobs/data-analyst?rss=1"]
+
+[sources.boards]
+employers = [{name = "Monzo", platform = "greenhouse", token = "monzo"}, {name = "Example Retail", platform = "smartrecruiters", token = "ExampleRetailUK"}]
+
+[hunt]
+since_days = 3650
+top_n = 15
+min_fit_pre = 40
+auto_per_run = 3
+
+[outreach]
+send_via = "user"
+follow_up_days = 6
+max_touches = 2
+
+[ux]
+chattiness = "normal"

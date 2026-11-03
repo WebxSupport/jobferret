@@ -1,0 +1,644 @@
+# Signal terms for memory_import.py.
+# One lower-case term per line, matched as whole words, case-insensitively.
+# A "# kind: skill|tool|domain|role" line sets the kind for the terms below it.
+# Other lines starting with # are labels for editors. The first kind given to a term wins.
+# Words that are common in ordinary chat (react, go, swift, spark, events, strategy) are left out
+# or written in a longer form, because a false signal costs the user more than a missed one.
+
+# group: software and data
+# kind: tool
+python
+javascript
+typescript
+java
+kotlin
+scala
+golang
+rust
+c++
+c#
+dotnet
+asp.net
+ruby on rails
+php
+django
+flask
+fastapi
+node.js
+reactjs
+react native
+next.js
+angular
+html
+css
+sql
+postgres
+mysql
+mongodb
+redis
+elasticsearch
+kafka
+apache spark
+pyspark
+airflow
+dbt
+snowflake
+bigquery
+databricks
+tableau
+power bi
+looker
+excel
+vba
+power query
+pandas
+numpy
+scikit-learn
+pytorch
+tensorflow
+jupyter
+matlab
+sas
+spss
+docker
+kubernetes
+terraform
+github actions
+git
+github
+aws
+azure
+google cloud
+gcp
+linux
+bash
+powershell
+graphql
+jira
+confluence
+salesforce
+hubspot
+servicenow
+zendesk
+sap
+oracle
+sharepoint
+power automate
+selenium
+unreal engine
+flutter
+# kind: skill
+machine learning
+deep learning
+data analysis
+data analytics
+data engineering
+data science
+data visualisation
+data modelling
+data warehousing
+statistics
+a/b testing
+etl
+natural language processing
+nlp
+computer vision
+web development
+frontend
+backend
+full-stack
+devops
+ci/cd
+microservices
+unit testing
+test automation
+software testing
+cybersecurity
+penetration testing
+network engineering
+it support
+agile
+scrum
+kanban
+user research
+prompt engineering
+# kind: domain
+fintech
+saas
+ecommerce
+edtech
+open source
+artificial intelligence
+generative ai
+gdpr
+# kind: role
+software engineer
+software developer
+data analyst
+data scientist
+data engineer
+machine learning engineer
+devops engineer
+site reliability engineer
+web developer
+frontend developer
+backend developer
+full-stack developer
+qa engineer
+test engineer
+solutions architect
+systems administrator
+database administrator
+security analyst
+it support analyst
+business analyst
+product manager
+product owner
+scrum master
+
+# group: marketing and communications
+# kind: tool
+google analytics
+ga4
+google ads
+semrush
+mailchimp
+hootsuite
+canva
+wordpress
+shopify
+# kind: skill
+seo
+ppc
+content marketing
+copywriting
+email marketing
+social media marketing
+paid social
+digital marketing
+brand strategy
+market research
+marketing automation
+conversion rate optimisation
+public relations
+influencer marketing
+event management
+crm
+# kind: domain
+advertising
+b2b marketing
+# kind: role
+marketing manager
+marketing executive
+digital marketing manager
+content writer
+copywriter
+seo specialist
+social media manager
+brand manager
+pr manager
+communications officer
+
+# group: finance and accounting
+# kind: tool
+xero
+quickbooks
+sage 50
+netsuite
+anaplan
+# kind: skill
+financial modelling
+budgeting
+forecasting
+management accounts
+month-end close
+bookkeeping
+payroll
+accounts payable
+accounts receivable
+credit control
+reconciliations
+audit
+vat
+corporation tax
+ifrs
+uk gaap
+variance analysis
+fp&a
+due diligence
+risk management
+compliance
+aml
+kyc
+investment analysis
+acca
+cima
+aat
+cfa
+# kind: domain
+banking
+insurance
+investment banking
+asset management
+private equity
+accountancy
+pensions
+# kind: role
+accountant
+management accountant
+financial accountant
+finance business partner
+financial analyst
+fp&a analyst
+auditor
+tax adviser
+bookkeeper
+payroll administrator
+credit controller
+finance manager
+financial controller
+cfo
+actuary
+investment analyst
+compliance officer
+
+# group: healthcare and care
+# kind: tool
+systmone
+emis
+# kind: skill
+patient care
+clinical governance
+safeguarding
+medication administration
+wound care
+phlebotomy
+triage
+infection control
+care planning
+clinical audit
+manual handling
+dementia care
+# kind: domain
+nhs
+primary care
+secondary care
+social care
+mental health
+public health
+elderly care
+clinical research
+healthcare
+# kind: role
+nurse
+registered nurse
+staff nurse
+mental health nurse
+healthcare assistant
+care assistant
+carer
+support worker
+midwife
+paramedic
+physiotherapist
+occupational therapist
+pharmacist
+pharmacy technician
+doctor
+gp
+radiographer
+dental nurse
+dentist
+social worker
+practice manager
+speech and language therapist
+dietitian
+psychologist
+counsellor
+
+# group: education and research
+# kind: tool
+moodle
+google classroom
+# kind: skill
+lesson planning
+curriculum design
+classroom management
+behaviour management
+send support
+tutoring
+mentoring
+coaching
+instructional design
+teaching
+pastoral care
+qts
+pgce
+# kind: domain
+further education
+higher education
+early years
+primary school
+secondary school
+academia
+# kind: role
+teacher
+primary teacher
+secondary teacher
+teaching assistant
+senco
+lecturer
+tutor
+head of department
+headteacher
+learning support assistant
+early years practitioner
+nursery nurse
+researcher
+research assistant
+phd student
+postdoc
+
+# group: trades, engineering, construction and logistics
+# kind: tool
+autocad
+revit
+solidworks
+# kind: skill
+carpentry
+joinery
+plumbing
+electrical installation
+bricklaying
+plastering
+welding
+painting and decorating
+roofing
+scaffolding
+hvac
+gas safe
+18th edition
+cscs card
+forklift
+hgv
+driver cpc
+plc programming
+preventive maintenance
+fault finding
+cnc
+quality control
+lean manufacturing
+six sigma
+health and safety
+iosh
+nebosh
+inventory management
+supply chain management
+# kind: domain
+construction
+manufacturing
+logistics
+warehousing
+automotive
+aerospace
+renewable energy
+facilities management
+civil engineering
+# kind: role
+electrician
+plumber
+carpenter
+joiner
+bricklayer
+plasterer
+welder
+mechanic
+vehicle technician
+hgv driver
+delivery driver
+warehouse operative
+forklift driver
+site manager
+quantity surveyor
+building surveyor
+maintenance engineer
+mechanical engineer
+electrical engineer
+civil engineer
+manufacturing engineer
+landscaper
+gardener
+apprentice
+warehouse manager
+
+# group: hospitality, retail and customer service
+# kind: tool
+epos
+# kind: skill
+customer service
+food hygiene
+food safety
+cash handling
+bartending
+stock control
+visual merchandising
+complaint handling
+haccp
+front of house
+# kind: domain
+hospitality
+retail
+catering
+food and beverage
+tourism
+# kind: role
+chef
+sous chef
+head chef
+kitchen porter
+waiter
+waitress
+bartender
+barista
+restaurant manager
+hotel manager
+receptionist
+housekeeper
+retail assistant
+sales assistant
+store manager
+team leader
+supervisor
+customer service advisor
+cashier
+
+# group: public sector, charity and legal
+# kind: skill
+policy analysis
+policy development
+stakeholder engagement
+procurement
+commissioning
+contract management
+grant management
+case management
+casework
+bid writing
+fundraising
+volunteer management
+community engagement
+contract drafting
+conveyancing
+litigation
+employment law
+# kind: domain
+civil service
+local government
+local authority
+central government
+housing association
+social housing
+charity
+third sector
+non-profit
+ngo
+law firm
+legal
+# kind: role
+civil servant
+policy advisor
+policy officer
+caseworker
+planning officer
+housing officer
+police officer
+firefighter
+prison officer
+probation officer
+administrative officer
+executive officer
+grade 7
+fundraiser
+charity manager
+volunteer coordinator
+solicitor
+paralegal
+legal secretary
+barrister
+
+# group: creative, media and design
+# kind: tool
+photoshop
+adobe illustrator
+indesign
+after effects
+premiere pro
+davinci resolve
+lightroom
+figma
+# kind: skill
+graphic design
+illustration
+photography
+videography
+video editing
+animation
+motion graphics
+3d modelling
+ux design
+ui design
+web design
+branding
+proofreading
+journalism
+content creation
+music production
+game design
+creative writing
+# kind: domain
+publishing
+media
+broadcasting
+film
+television
+gaming
+fashion
+architecture
+# kind: role
+graphic designer
+illustrator
+photographer
+videographer
+video editor
+animator
+motion designer
+art director
+creative director
+journalist
+content creator
+ux designer
+ui designer
+product designer
+game designer
+game developer
+architect
+
+# group: business, operations, sales and people
+# kind: tool
+microsoft office
+# kind: skill
+project management
+programme management
+stakeholder management
+change management
+people management
+team leadership
+line management
+negotiation
+process improvement
+operations management
+business development
+account management
+sales
+b2b sales
+lead generation
+customer success
+recruitment
+talent acquisition
+human resources
+employee relations
+learning and development
+prince2
+management consulting
+business analysis
+office management
+# kind: domain
+consulting
+pharmaceuticals
+life sciences
+biotech
+real estate
+property
+energy
+startups
+# kind: role
+project manager
+programme manager
+operations manager
+account manager
+business development manager
+sales executive
+sales manager
+recruiter
+recruitment consultant
+hr advisor
+hr manager
+office manager
+executive assistant
+personal assistant
+administrator
+consultant
+management consultant
+lab technician
+scientist
+research scientist

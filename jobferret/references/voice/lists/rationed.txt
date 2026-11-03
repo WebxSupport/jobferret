@@ -1,0 +1,84 @@
+# rationed.txt
+# What this is: words, phrases and punctuation that are fine once and a tell when repeated.
+# Each entry is allowed AT MOST ONCE per document. A second hit is a failure of voice_lint
+# check 3 (rationed count). Three or more categories over the limit means "rewrite from the
+# facts, do not patch" (04 §7 step 3).
+# Match semantics: one entry per line; lowercase; matched case-insensitively with word
+# boundaries. An entry with no letters or digits ("!", ";" and the em dash) is matched as a
+# plain substring. No entry depends on leading or trailing whitespace, so a loader may strip
+# every line.
+# Dash rule: the em dash is an entry below. A SPACED en dash ("word – word") and a spaced hyphen
+# used as a dash ("word - word") count toward the same allowance, but they cannot be listed
+# as literals without whitespace, so the linter matches them with the regex \s[–-]\s.
+# Do not count a dash inside a date or number range ("2022–2024", "Mar 2022 – Present"), and
+# do not run the dash check on --format cv-bullets.
+#
+# Optional grouping: lines that start with "# group:" name entries that share ONE allowance.
+# Treat them as a combined count (for example "excited" plus "keen" plus "eager" is at most one
+# in total). The per-entry rule still applies on top.
+# group: feelings = excited | keen | eager
+# group: hedged-belief = i believe | i feel
+# group: intensifiers = really | very | truly | incredibly | extremely
+# group: dashes = em dash | spaced en dash | spaced hyphen (one allowance in total)
+#
+# Per-format overrides (04 §4): "!" is zero, not one, in cover-letter and form-answer.
+# ";" is rationed only in documents under 150 words.
+# Source: 04 §4 "Rationed", 04 §3 (structural and tonal rows), 04 §7 step 3.
+#
+# Not literal strings, so the linter handles them separately (structural):
+# structural: tricolon        a list of exactly three items (adjectives, nouns or clauses),
+#                             "A, B and C"; at most one per document
+# structural: antithesis      "not X, but Y", "it's not X, it's Y", "X rather than Y"; the
+#                             literals below catch some, a regex over "not ... but" catches more
+# structural: colon-payoff    a colon that sets up a punchline ("The result: a 30% drop.");
+#                             a colon after a short setup clause followed by a fragment
+# structural: rhetorical-q    a question the writer answers or does not expect answered; zero in
+#                             cover-letter and form-answer (any "?" there is a flag); in email,
+#                             hiring-manager, follow-up and thank-you the one "?" that is the ask
+#                             is allowed, a second is not
+# structural: trailing-ing    a clause after a comma that starts with a present participle and
+#                             adds unearned importance (", ensuring seamless delivery")
+# structural: recap           a final paragraph that restates the document (see closers.txt)
+# structural: mirror          every paragraph has the same shape and length, within 20%
+#                             (04 §7 step 7)
+# structural: real            "real" or "really" as an intensifier is handled in agent-tics.txt
+
+# --- first-person feelings ---
+i believe
+i feel
+excited
+keen
+eager
+look forward to
+i'd love to
+i would love to
+
+# --- idiom and address (reach out is American drift for UK locale, 04 §3 tonal) ---
+reach out
+dear hiring manager
+
+# --- intensifiers (04 §4; "genuinely" lives in agent-tics.txt) ---
+really
+very
+truly
+incredibly
+extremely
+
+# --- connectors and trailing clauses ---
+additionally
+ensuring
+
+# --- antithesis literals ---
+not just
+not only
+rather than
+it's not
+it isn't
+
+# --- borrowed jargon that is legitimate in some jobs ---
+holistic
+
+# --- punctuation ---
+!
+;
+—

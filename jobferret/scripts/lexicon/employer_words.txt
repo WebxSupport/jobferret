@@ -1,0 +1,119 @@
+# Words that mark a line as an employer, school or organisation name. One entry per line,
+# matched case-insensitively on word boundaries. See role_words.txt for how the two lists
+# are compared. Lines starting with # are comments.
+ltd
+ltd.
+limited
+plc
+llp
+llc
+lp
+inc
+inc.
+incorporated
+corp
+corp.
+corporation
+gmbh
+ag
+sa
+pty
+co.
+company
+& co
+& sons
+and sons
+group
+holdings
+university
+college
+school
+academy
+institute
+institution
+polytechnic
+nhs
+trust
+council
+hospital
+clinic
+surgery
+practice
+bank
+building society
+partners
+partnership
+solutions
+services
+systems
+technologies
+technology
+consulting
+consultancy
+agency
+foundation
+charity
+association
+society
+federation
+union
+authority
+department
+ministry
+office
+studios
+studio
+labs
+laboratory
+laboratories
+enterprises
+industries
+international
+global
+worldwide
+associates
+brothers
+bros
+ventures
+capital
+logistics
+construction
+motors
+foods
+stores
+supermarkets
+retail
+hotel
+hotels
+restaurant
+cafe
+pub
+bar
+gym
+leisure
+centre
+center
+church
+museum
+gallery
+library
+police
+fire service
+army
+navy
+air force
+jsc
+pvt
+pte
+bhd
+sdn
+firm
+shop
+coffee shop
+organisation
+organization
+bureau
+cooperative
+co-operative
+joint stock
+tnhh

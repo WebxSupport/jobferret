@@ -1,0 +1,19 @@
+schema_version: "1.1"
+name: hunts-with-reasons
+expected_outcome: |
+  The response follows the `hunt` mode with JOBFERRET_HOME pointing at the provided
+  folder: it announces each step in one line, runs discovery offline over the key-free
+  sources (saying which sources need a key and where to get one, without stopping),
+  runs the deterministic screen, and then judges only the top pre-screened jobs rather
+  than everything. Every shortlisted job is shown in a numbered table with company,
+  title, location, pay if known, source, and a one-line reason that refers to the
+  user's profile or CV facts; dismissed jobs get a one-line reason too, and any
+  exclusion names the rule that fired (for example a dealbreaker term or an agency
+  posting when the profile skips agencies). It asks which of the shortlist to apply
+  to, with "all" allowed, and does not apply to anything in this run. It writes or
+  names the digest file. It does not fetch LinkedIn, Indeed or Totaljobs by script,
+  WebFetch or curl, and opens none of them; Indeed is read only in a browser during
+  hunt, and this run has none, so at most it reports Indeed as skipped or not enabled.
+  No job, company or figure is invented beyond what the cached responses contain.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,2115 @@
+[
+  {
+    "name": "Indeed UK",
+    "url": "https://uk.indeed.com",
+    "kind": "board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Largest UK job site by traffic: indeed.com 34.06M monthly UK visits, Oct 2025 (Semrush public page, vendor).",
+    "api": {
+      "available": true,
+      "docs_url": "https://docs.indeed.com/mcp",
+      "auth": "OAuth 2.0 via Indeed account; authorisation server https://secure.indeed.com; dynamic client registration endpoint advertised",
+      "free_tier": "free (beta)",
+      "rate_limit": null,
+      "endpoint_pattern": "https://mcp.indeed.com/claude/mcp (MCP Streamable HTTP)",
+      "verified_live": false,
+      "sample_fields": [
+        "Job Search: title, company, location, salary, application URL",
+        "Job Detail",
+        "Get Resume",
+        "Get Company Data"
+      ],
+      "notes": "Live: unauthenticated POST returned 401 with resource_metadata; scopes job_seeker.jobs.search, job_seeker.profile.read, job_seeker.company.details.read, offline_access. Docs say 'available only for Claude Connector'. No apply tool. Publisher API retired."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited (scraping); MCP is the sanctioned read route",
+      "automated_apply": "prohibited",
+      "quote": "Job Seeker Terms (29 Sep 2026) prohibit 'any automation, scripting, or bots to automate the Indeed Apply process' (see 01 §C2)",
+      "url": "https://www.indeed.com/legal",
+      "read_on": "2026-11-02"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "403 to curl. Use MCP if the owner's test works, otherwise alert emails (rc/clk?jk={jobKey} -> https://uk.indeed.com/viewjob?jk={jk}; pattern unverified for 2026). Resolve to employer ATS before applying."
+  },
+  {
+    "name": "LinkedIn Jobs",
+    "url": "https://www.linkedin.com/jobs",
+    "kind": "board",
+    "sectors": [
+      "professional",
+      "tech",
+      "sales",
+      "senior"
+    ],
+    "reach_note": "Main channel for agency and in-house recruiters in professional and tech roles.",
+    "api": {
+      "available": false,
+      "docs_url": "https://learn.microsoft.com/en-us/linkedin/talent/",
+      "auth": "partner only",
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "No public jobs API."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited",
+      "automated_apply": "prohibited",
+      "quote": "'Develop, support or use software, devices, scripts, robots or any other means or processes (such as crawlers, browser plugins and add-ons or any other technology) to scrape or copy the Services'",
+      "url": "https://www.linkedin.com/legal/user-agreement",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Alert emails: linkedin.com/comm/jobs/view/{jobId}/ -> canonical https://www.linkedin.com/jobs/view/{jobId}/ (pattern unverified for 2026). 'Open to work' is the inbound signal."
+  },
+  {
+    "name": "Reed",
+    "url": "https://www.reed.co.uk",
+    "kind": "board",
+    "sectors": [
+      "all",
+      "admin",
+      "finance",
+      "public sector supply",
+      "social care",
+      "agency-heavy"
+    ],
+    "reach_note": "Large UK-owned board; also an agency. Traffic figures found were stale (2017).",
+    "api": {
+      "available": true,
+      "docs_url": "https://www.reed.co.uk/developers/jobseeker",
+      "auth": "HTTP Basic, API key as username, empty password",
+      "free_tier": "free self-serve key (per third-party guides; not signed up)",
+      "rate_limit": "not published",
+      "endpoint_pattern": "https://www.reed.co.uk/api/1.0/search?keywords=&locationName=&distanceFromLocation=&resultsToTake=100&resultsToSkip= ; detail https://www.reed.co.uk/api/1.0/jobs/{jobId}",
+      "verified_live": false,
+      "sample_fields": [
+        "jobId",
+        "employerId",
+        "employerName",
+        "employerProfileId",
+        "jobTitle",
+        "description",
+        "locationName",
+        "minimumSalary",
+        "maximumSalary",
+        "detail: yearlyMinimumSalary",
+        "yearlyMaximumSalary",
+        "salaryType",
+        "contractType",
+        "jobType",
+        "expirationDate",
+        "externalUrl",
+        "jobUrl"
+      ],
+      "notes": "Live: 401 with WWW-Authenticate: Basic (auth shape verified, data not, so verified_live false). Filters include postedByRecruitmentAgency, postedByDirectEmployer, permanent, contract, temp, partTime, fullTime, graduate, minimumSalary, maximumSalary. Unknown job ID returns a blank job, not 404. Salary omitted when hidden."
+    },
+    "feeds": {
+      "type": "jsonld",
+      "url_pattern": "https://www.reed.co.uk/jobs/{slug}/{jobId} (JobPosting on advert pages; identifier.value = API jobId)",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "allowed (no anti-automation clause found)",
+      "automated_apply": "not addressed",
+      "quote": "'You may copy material on the Website for your own private or domestic purposes, but no copying for any commercial or business use is permitted.' robots.txt allows AnthropicBot and GPTBot except /api/ and handlers.",
+      "url": "https://www.reed.co.uk/policies#termsConditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Best machine access of any large UK board. Apply on-site with Reed profile or via externalUrl."
+  },
+  {
+    "name": "Totaljobs",
+    "url": "https://www.totaljobs.com",
+    "kind": "board",
+    "sectors": [
+      "all",
+      "sales",
+      "office",
+      "engineering"
+    ],
+    "reach_note": "Second-largest UK job site by traffic: 6.92M monthly visits, Oct 2025 (Semrush public page, vendor). StepStone UK.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "No public API."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited",
+      "automated_apply": "prohibited",
+      "quote": "6.2.11. You must create, register and operate your account personally, and must not create, access or use an account by means of any bot, script, crawler, scraper or other automated tool or process ... This includes using automated means to submit applications or messages, extract data from the platform, or create multiple or false accounts",
+      "url": "https://www.totaljobs.com/about/terms-and-conditions/",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Jobseeker terms effective 29 Oct 2026. Profile not searchable by default (6.2.1); searchable profiles show CV and 'Last Active' date. Alert emails contain a personalised link that logs the user in: never store or follow. Advert ID pattern job{8-9 digits}."
+  },
+  {
+    "name": "CWJobs",
+    "url": "https://www.cwjobs.co.uk",
+    "kind": "board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "StepStone UK IT brand; agency-heavy.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited (inferred)",
+      "automated_apply": "prohibited (inferred)",
+      "quote": "Page fetched showed terms 'Effective from 31st October 2025' without clause 6.2.11; Totaljobs and Caterer (same operator) carry the 29 Oct 2026 bot ban.",
+      "url": "https://www.cwjobs.co.uk/about/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Own count: 3 of 25 page-one IDs shared with Totaljobs for 'developer, London'."
+  },
+  {
+    "name": "Jobsite",
+    "url": "https://www.jobsite.co.uk",
+    "kind": "board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "StepStone UK brand; overlaps Totaljobs.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited (inferred)",
+      "automated_apply": "prohibited (inferred)",
+      "quote": "Terms page showed 'Effective from 31st October 2025'; same operator as Totaljobs.",
+      "url": "https://www.jobsite.co.uk/about/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Low marginal value if on Totaljobs."
+  },
+  {
+    "name": "Caterer.com",
+    "url": "https://www.caterer.com",
+    "kind": "board",
+    "sectors": [
+      "hospitality",
+      "catering"
+    ],
+    "reach_note": "StepStone UK hospitality brand.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited",
+      "automated_apply": "prohibited",
+      "quote": "6.2.11. You must create, register and operate your account personally, and must not create, access or use an account by means of any bot, script, crawler, scraper or other automated tool or process ... This includes using automated means to submit applications or messages, extract data from the platform, or create multiple or false accounts",
+      "url": "https://www.caterer.com/about/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Terms effective 29 Oct 2026."
+  },
+  {
+    "name": "Milkround",
+    "url": "https://www.milkround.com",
+    "kind": "board",
+    "sectors": [
+      "graduate"
+    ],
+    "reach_note": "StepStone UK graduate brand.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited (inferred)",
+      "automated_apply": "prohibited (inferred)",
+      "quote": "Terms page showed 'Effective from 31st October 2025'; same operator as Totaljobs.",
+      "url": "https://www.milkround.com/about/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": ""
+  },
+  {
+    "name": "CV-Library",
+    "url": "https://www.cv-library.co.uk",
+    "kind": "board",
+    "sectors": [
+      "all",
+      "agency-heavy",
+      "trades",
+      "engineering"
+    ],
+    "reach_note": "Large independent UK board with a large CV database; no current traffic figure found.",
+    "api": {
+      "available": false,
+      "docs_url": "https://www.cv-library.co.uk/developers/job-view-api",
+      "auth": "partner key",
+      "free_tier": "no ('not provided as standard')",
+      "rate_limit": null,
+      "endpoint_pattern": "partner Job View API by job ID only",
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "'not designed for bulk download of job listings'. No public search API."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (terms page 403)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": "https://www.cv-library.co.uk/terms",
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "403 to curl on search and terms. robots.txt disallows /api/. Worth a searchable profile for agency-led sectors."
+  },
+  {
+    "name": "Glassdoor UK",
+    "url": "https://www.glassdoor.co.uk",
+    "kind": "board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Reviews and salaries; job listings largely sourced from Indeed after 2025 integration (unverified date).",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (403)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": "https://www.glassdoor.co.uk/about/terms.htm",
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Use for employer research, not discovery."
+  },
+  {
+    "name": "Monster UK",
+    "url": "https://www.monster.co.uk",
+    "kind": "board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "monster.co.uk redirected to monster.com, which returned 403 (live). 2025 insolvency unverified.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Not worth the time."
+  },
+  {
+    "name": "Adzuna",
+    "url": "https://www.adzuna.co.uk",
+    "kind": "aggregator",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "UK-founded aggregator; listings point to source boards and employers.",
+    "api": {
+      "available": true,
+      "docs_url": "https://developer.adzuna.com/docs/search",
+      "auth": "app_id + app_key query parameters",
+      "free_tier": "free key; 'The free tier is intended for evaluating the API'",
+      "rate_limit": "current terms: shown in account; 2024 archived terms: 25/min, 250/day, 1000/week, 2500/month",
+      "endpoint_pattern": "https://api.adzuna.com/v1/api/jobs/gb/search/{page}?app_id=&app_key=&what=&where=&distance=&max_days_old=&results_per_page=&sort_by=&salary_min=&permanent=&contract=&full_time=&part_time=&company=&category=",
+      "verified_live": false,
+      "sample_fields": [
+        "id",
+        "title",
+        "description (snippet)",
+        "created",
+        "redirect_url",
+        "adref",
+        "latitude",
+        "longitude",
+        "location.area[]",
+        "location.display_name",
+        "category.label",
+        "category.tag",
+        "company.display_name",
+        "salary_min",
+        "salary_max",
+        "salary_is_predicted",
+        "contract_time",
+        "contract_type"
+      ],
+      "notes": "Spec read live from https://developer.adzuna.com/swagger/spec/test2.json (200). Keyless call returned 400. redirect_url destination unverified. salary_is_predicted=1 means Adzuna's estimate. Legacy XML via content-type=text/xml&legacy_xml=1. Commercial use needs licence; attribution required when publishing."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed via API under licence terms",
+      "automated_apply": "n/a",
+      "quote": "'The free tier is intended for evaluating the API.' Commercial use 'subject to a 14 day trial period' then 'a licence agreement is required'.",
+      "url": "https://developer.adzuna.com/docs/terms_of_service",
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Website 403 to curl."
+  },
+  {
+    "name": "GOV.UK Find a job (DWP)",
+    "url": "https://findajob.dwp.gov.uk",
+    "kind": "public-sector",
+    "sectors": [
+      "entry-level",
+      "care",
+      "warehouse",
+      "cleaning",
+      "security",
+      "all"
+    ],
+    "reach_note": "DWP board for England, Scotland, Wales; used by Jobcentre work coaches. Being replaced (supplier contract ending).",
+    "api": {
+      "available": false,
+      "docs_url": "https://findajob.dwp.gov.uk/bulk-upload-specification.html",
+      "auth": "employer SFTP only",
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "Only employer bulk upload by SFTP. Bulk-uploaded adverts expire after 30 days unless a closing date is set."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (site 503 to automated clients)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": "https://findajob.dwp.gov.uk/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Search and terms returned 503 to curl and WebFetch on 3 Nov 2026. gov.uk/find-a-job now links to jobs.service.gov.uk/jobs (TLS failed from here). Advert URLs /details/{id}. Watch for commission-only and self-employed posts."
+  },
+  {
+    "name": "Google for Jobs",
+    "url": "https://www.google.com/search?q=jobs",
+    "kind": "aggregator",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Panel in Google Search built from JobPosting markup.",
+    "api": {
+      "available": false,
+      "docs_url": "https://docs.cloud.google.com/talent-solution/job-search/docs",
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "Cloud Talent Solution is for employers' own sites, not a consumer search API."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited (scraping Google results breaches Google terms; judgment)",
+      "automated_apply": "n/a",
+      "quote": null,
+      "url": "https://policies.google.com/terms",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Google job alerts: take the target from the url= parameter."
+  },
+  {
+    "name": "Teaching Vacancies (DfE)",
+    "url": "https://teaching-vacancies.service.gov.uk",
+    "kind": "public-sector",
+    "sectors": [
+      "education",
+      "schools"
+    ],
+    "reach_note": "Free DfE service for state schools in England; 4,754 live jobs on 3 Nov 2026 (own count from API meta).",
+    "api": {
+      "available": true,
+      "docs_url": "https://teaching-vacancies.service.gov.uk/api/v1/jobs.json",
+      "auth": "none",
+      "free_tier": "free, no key",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://teaching-vacancies.service.gov.uk/api/v1/jobs.json?page={n}",
+      "verified_live": true,
+      "sample_fields": [
+        "title",
+        "description",
+        "datePosted",
+        "validThrough",
+        "employmentType[]",
+        "hiringOrganization",
+        "jobLocation",
+        "occupationalCategory",
+        "industry",
+        "jobBenefits",
+        "directApply",
+        "url"
+      ],
+      "notes": "Live: 200 JSON, 100 per page, 48 pages, links.next for paging, items are schema.org JobPosting. Query parameters not tested; fetch all and filter locally."
+    },
+    "feeds": {
+      "type": "jsonld",
+      "url_pattern": "https://teaching-vacancies.service.gov.uk/api/v1/jobs.json",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "allowed",
+      "automated_apply": "not addressed",
+      "quote": "'You are free to reuse job listing data under the terms of the Open Government Licence ... you must not charge any fee or commission for contacting, interviewing or hiring a respondent to your listing if you have reused Teaching Vacancies data.' (last updated 9 July 2026)",
+      "url": "https://teaching-vacancies.service.gov.uk/pages/terms-and-conditions#terms-and-conditions-for-api-users",
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "both",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Some schools take applications on-site, others redirect."
+  },
+  {
+    "name": "NHS Jobs",
+    "url": "https://www.jobs.nhs.uk",
+    "kind": "public-sector",
+    "sectors": [
+      "healthcare",
+      "NHS",
+      "primary care"
+    ],
+    "reach_note": "NHS England and Wales plus many GP practices; 4,642 results for 'nurse' on 3 Nov 2026.",
+    "api": {
+      "available": true,
+      "docs_url": "https://www.nhsbsa.nhs.uk/node/6112",
+      "auth": "none",
+      "free_tier": "free, no key",
+      "rate_limit": "not stated; poll gently",
+      "endpoint_pattern": "https://www.jobs.nhs.uk/api/v1/search_xml?keyword=&location=&distance=&contractType=&page=",
+      "verified_live": true,
+      "sample_fields": [
+        "id",
+        "reference",
+        "title",
+        "description (truncated)",
+        "employer",
+        "type",
+        "salary",
+        "closeDate",
+        "postDate",
+        "url",
+        "locations/location",
+        "totalPages",
+        "totalResults"
+      ],
+      "notes": "Live: 200 application/xml, 10 per page. location+distance and contractType filter; page pages; sort had no visible effect. NHSBSA navigation lists 'Removed External Jobs Board API', so this may be withdrawn. Employer Self-Serve XML/RSS API documented in NHSBSA .docx files."
+    },
+    "feeds": {
+      "type": "xml",
+      "url_pattern": "https://www.jobs.nhs.uk/api/v1/search_xml?keyword={kw}&location={place}&distance={miles}&page={n}",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "not addressed (no jobseeker clause found)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": "https://www.jobs.nhs.uk/candidate/terms-and-conditions",
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Advert pages have no JobPosting JSON-LD. Adverts may close early on volume; poll twice daily. Scotland and NI use separate sites."
+  },
+  {
+    "name": "Civil Service Jobs",
+    "url": "https://www.civilservicejobs.service.gov.uk",
+    "kind": "public-sector",
+    "sectors": [
+      "civil service",
+      "government"
+    ],
+    "reach_note": "All UK central government departments and agencies.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "No API or RSS found."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (bot-check page)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Live: 200 but content is a 'confirm you're a real person' check. robots.txt allows all except JoobleBot. Use the site's job alerts. Closing times often 23:55."
+  },
+  {
+    "name": "jobs.ac.uk",
+    "url": "https://www.jobs.ac.uk",
+    "kind": "niche",
+    "sectors": [
+      "academia",
+      "research",
+      "higher education"
+    ],
+    "reach_note": "Main UK university and research jobs board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "rss",
+      "url_pattern": "https://www.jobs.ac.uk/feeds/subject-areas/{subject} (index pages seen in search; feed URL pattern unverified)",
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Search page 200, no JobPosting. Most applications redirect to the university's own system."
+  },
+  {
+    "name": "TES Jobs",
+    "url": "https://www.tes.com/jobs",
+    "kind": "niche",
+    "sectors": [
+      "education",
+      "schools",
+      "international schools"
+    ],
+    "reach_note": "Main commercial schools board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "jsonld",
+      "url_pattern": "https://www.tes.com/jobs/vacancy/{slug}-{id}",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "unknown (terms URL 404)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "grey",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Advert pages carry JobPosting with directApply true and salary ranges (live)."
+  },
+  {
+    "name": "LGJobs",
+    "url": "https://www.lgjobs.com",
+    "kind": "public-sector",
+    "sectors": [
+      "local government"
+    ],
+    "reach_note": "LGA's board for English councils.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "200, no JobPosting. Councils mostly use their own ATS."
+  },
+  {
+    "name": "Jobs Go Public",
+    "url": "https://www.jobsgopublic.com",
+    "kind": "public-sector",
+    "sectors": [
+      "local government",
+      "public sector",
+      "housing"
+    ],
+    "reach_note": "Public-sector board and ATS used by many councils.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "both",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Home 200; /search returned 404."
+  },
+  {
+    "name": "myjobscotland",
+    "url": "https://www.myjobscotland.gov.uk",
+    "kind": "public-sector",
+    "sectors": [
+      "local government (Scotland)"
+    ],
+    "reach_note": "Scottish councils' shared board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Not fetched."
+  },
+  {
+    "name": "CharityJob",
+    "url": "https://www.charityjob.co.uk",
+    "kind": "niche",
+    "sectors": [
+      "charity",
+      "nonprofit"
+    ],
+    "reach_note": "Main UK charity jobs board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (terms URL 404)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "both",
+    "account_needed": false,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Search page 200 with only BreadcrumbList JSON-LD."
+  },
+  {
+    "name": "Guardian Jobs",
+    "url": "https://jobs.theguardian.com",
+    "kind": "niche",
+    "sectors": [
+      "charity",
+      "public sector",
+      "media",
+      "education"
+    ],
+    "reach_note": "Long-standing board for public, charity and media roles.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (403)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "403 to curl."
+  },
+  {
+    "name": "Police and fire service careers",
+    "url": "https://www.college.police.uk/career-learning",
+    "kind": "public-sector",
+    "sectors": [
+      "police",
+      "fire"
+    ],
+    "reach_note": "Each force and fire service recruits on its own site.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "policecareers.co.uk is a parked domain (live). Use per-force watch-list and email alerts where offered."
+  },
+  {
+    "name": "Jobserve",
+    "url": "https://www.jobserve.com",
+    "kind": "board",
+    "sectors": [
+      "contract IT",
+      "engineering"
+    ],
+    "reach_note": "Long-running UK contract IT board; nearly all agency posts with day rates and IR35 status.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "rss",
+      "url_pattern": "saved-search RSS (historical; unverified)",
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (pages return a 75-byte script stub)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Apply goes to the agency. robots.txt disallows saved-search and share paths."
+  },
+  {
+    "name": "Technojobs",
+    "url": "https://www.technojobs.co.uk",
+    "kind": "board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "Small UK IT board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "both",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Search and terms URLs returned tiny redirect stubs."
+  },
+  {
+    "name": "Welcome to the Jungle (formerly Otta)",
+    "url": "https://www.welcometothejungle.com/en",
+    "kind": "board",
+    "sectors": [
+      "tech",
+      "startups"
+    ],
+    "reach_note": "Acquired Otta Jan 2024; Otta brand retired; 2.18M job seekers claimed (2025, vendor via Entrepreneur UK).",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited",
+      "automated_apply": "prohibited",
+      "quote": "'Develop, support, or use any software, device, script, robot, or any other means or process (including but not limited to spiders, browser plug-ins and add-ons, or any other technology) to web \"scrape\" or otherwise copy or download our Website'",
+      "url": "https://www.welcometothejungle.com/en/pages/terms",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Underlying jobs usually on employer ATS feeds."
+  },
+  {
+    "name": "cord",
+    "url": "https://cord.com",
+    "kind": "board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "UK tech marketplace with direct messaging to hiring teams.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "prohibited",
+      "automated_apply": "prohibited",
+      "quote": "'use any automated system, including without limitation \"robots\", \"spiders\" or \"offline readers\" to access the cord Website in a manner that send more request messages ... than a human can reasonably produce'",
+      "url": "https://cord.co/terms",
+      "read_on": "2026-11-03"
+    },
+    "tier": "prohibited-automation",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": false,
+    "notes": "cord.co redirects to cord.com."
+  },
+  {
+    "name": "Haystack",
+    "url": "https://haystackapp.io",
+    "kind": "board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "UK tech jobs app with candidate profiles.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Live homepage 200; terms not read."
+  },
+  {
+    "name": "Hired",
+    "url": "https://hired.com",
+    "kind": "board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "Defunct: hired.com redirects to an LHH 'Our story' page (live, 3 Nov 2026).",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "Drop from source list."
+  },
+  {
+    "name": "Work in Startups",
+    "url": "https://workinstartups.com",
+    "kind": "niche",
+    "sectors": [
+      "startups"
+    ],
+    "reach_note": "Small UK startup board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (403)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "both",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "403 to curl."
+  },
+  {
+    "name": "ITJobsWatch",
+    "url": "https://www.itjobswatch.co.uk",
+    "kind": "niche",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "Salary and day-rate statistics by skill from UK adverts; reference, not a board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "Use as a salary benchmark source read by the user."
+  },
+  {
+    "name": "Prospects",
+    "url": "https://www.prospects.ac.uk",
+    "kind": "board",
+    "sectors": [
+      "graduate"
+    ],
+    "reach_note": "Jisc's graduate careers service.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (terms URL 404)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Search page 200, no JobPosting."
+  },
+  {
+    "name": "TARGETjobs",
+    "url": "https://targetjobs.co.uk",
+    "kind": "board",
+    "sectors": [
+      "graduate"
+    ],
+    "reach_note": "Major graduate board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "unknown",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Homepage 200."
+  },
+  {
+    "name": "Gradcracker",
+    "url": "https://www.gradcracker.com",
+    "kind": "niche",
+    "sectors": [
+      "graduate",
+      "STEM",
+      "engineering"
+    ],
+    "reach_note": "STEM graduate and placement board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (403)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "403 to curl."
+  },
+  {
+    "name": "Bright Network",
+    "url": "https://www.brightnetwork.co.uk",
+    "kind": "board",
+    "sectors": [
+      "graduate"
+    ],
+    "reach_note": "Graduate network and board.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": ""
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (Cloudflare challenge)",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "redirect",
+    "account_needed": true,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Cloudflare 'Just a moment' page."
+  },
+  {
+    "name": "Recruitment agencies (Hays, Michael Page, Robert Walters, Robert Half, Reed, Adecco, Randstad, specialist tech)",
+    "url": "https://www.hays.co.uk",
+    "kind": "agency",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Agencies post the same vacancy to many boards via Broadbean, idibu and similar.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": null,
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "Agency sites run Bullhorn, Vincere, Firefish etc.; no public feeds found (unverified)."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "unknown",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "assist",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": true,
+    "alert_emails": true,
+    "notes": "Apply = CV to named consultant; log right-to-represent per client and role. Own count: 14 of 25 Totaljobs 'developer, London' page-one results from agencies or hiring marketplaces."
+  },
+  {
+    "name": "Greenhouse job boards",
+    "url": "https://boards.greenhouse.io",
+    "kind": "ats-board",
+    "sectors": [
+      "tech",
+      "all"
+    ],
+    "reach_note": "Common with UK scale-ups (Monzo, Deliveroo tested).",
+    "api": {
+      "available": true,
+      "docs_url": "https://developers.greenhouse.io/job-board.html",
+      "auth": "none for GET",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://boards-api.greenhouse.io/v1/boards/{token}/jobs[?content=true]",
+      "verified_live": true,
+      "sample_fields": [
+        "absolute_url",
+        "title",
+        "location.name",
+        "first_published",
+        "updated_at",
+        "application_deadline",
+        "requisition_id",
+        "company_name",
+        "metadata",
+        "data_compliance",
+        "internal_job_id"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: monzo 200 (62 jobs), deliveroo 200."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed (public job-board API)",
+      "automated_apply": "grey",
+      "quote": "POST of applications via API needs the employer's key (01 §C1)",
+      "url": "https://developers.greenhouse.io/job-board.html",
+      "read_on": "2026-11-02"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "first_published vs updated_at gives repost signal."
+  },
+  {
+    "name": "Lever job boards",
+    "url": "https://jobs.lever.co",
+    "kind": "ats-board",
+    "sectors": [
+      "tech",
+      "all"
+    ],
+    "reach_note": "Octopus Energy tested.",
+    "api": {
+      "available": true,
+      "docs_url": "https://github.com/lever/postings-api",
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://api.lever.co/v0/postings/{site}?mode=json[&limit=]",
+      "verified_live": true,
+      "sample_fields": [
+        "id",
+        "text",
+        "hostedUrl",
+        "applyUrl",
+        "createdAt",
+        "categories.commitment",
+        "categories.location",
+        "categories.team",
+        "workplaceType",
+        "country",
+        "descriptionPlain",
+        "lists",
+        "additionalPlain"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: octoenergy 200, palantir 200, cera 404."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed (public postings API)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": "https://github.com/lever/postings-api",
+      "read_on": "2026-11-02"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": ""
+  },
+  {
+    "name": "Ashby job boards",
+    "url": "https://jobs.ashbyhq.com",
+    "kind": "ats-board",
+    "sectors": [
+      "tech"
+    ],
+    "reach_note": "Synthesia tested.",
+    "api": {
+      "available": true,
+      "docs_url": "https://developers.ashbyhq.com/docs/public-job-posting-api",
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true",
+      "verified_live": true,
+      "sample_fields": [
+        "id",
+        "title",
+        "department",
+        "team",
+        "employmentType",
+        "location",
+        "secondaryLocations",
+        "workplaceType",
+        "isRemote",
+        "publishedAt",
+        "jobUrl",
+        "applyUrl",
+        "descriptionPlain",
+        "compensation.compensationTierSummary",
+        "shouldDisplayCompensationOnJobPostings"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: synthesia 200 (33 jobs), cleo 404."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed (public posting API)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": "https://developers.ashbyhq.com/docs/public-job-posting-api",
+      "read_on": "2026-11-02"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": ""
+  },
+  {
+    "name": "Workable job boards",
+    "url": "https://apply.workable.com",
+    "kind": "ats-board",
+    "sectors": [
+      "tech",
+      "SME",
+      "all"
+    ],
+    "reach_note": "Common with UK SMEs; Hugging Face tested.",
+    "api": {
+      "available": true,
+      "docs_url": null,
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "GET https://apply.workable.com/api/v1/widget/accounts/{subdomain} ; POST https://apply.workable.com/api/v3/accounts/{subdomain}/jobs (JSON body {query,location,department,worktype,remote})",
+      "verified_live": true,
+      "sample_fields": [
+        "title",
+        "shortcode",
+        "employment_type",
+        "telecommuting",
+        "department",
+        "url",
+        "application_url",
+        "published_on",
+        "created_at",
+        "city",
+        "country",
+        "locations",
+        "experience",
+        "function",
+        "industry",
+        "education"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: huggingface v1 200 (6 jobs), v3 POST 200 (results[] with remote, location.countryCode); v3 GET 404. Not officially documented."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (undocumented widget endpoint)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "Previously unconfirmed in 00 §5; now confirmed."
+  },
+  {
+    "name": "Teamtailor career sites",
+    "url": "https://www.teamtailor.com",
+    "kind": "ats-board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Common with UK and Nordic SMEs.",
+    "api": {
+      "available": false,
+      "docs_url": "https://docs.teamtailor.com",
+      "auth": "employer API key",
+      "free_tier": null,
+      "rate_limit": null,
+      "endpoint_pattern": null,
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "Official API needs the employer's key; public RSS is the discovery route."
+    },
+    "feeds": {
+      "type": "rss",
+      "url_pattern": "https://{company}.teamtailor.com/jobs.rss or https://{custom-careers-domain}/jobs.rss",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "unknown (public RSS)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "Live: career.teamtailor.com/jobs.rss 200, 17 items; fields title, description (HTML), pubDate, link, remoteStatus, guid, tt:locations, tt:department. teamtailor.teamtailor.com 404 (slug must match)."
+  },
+  {
+    "name": "Recruitee career sites",
+    "url": "https://recruitee.com",
+    "kind": "ats-board",
+    "sectors": [
+      "all"
+    ],
+    "reach_note": "Tellent-owned ATS used by EU and UK SMEs; vilgain tested.",
+    "api": {
+      "available": true,
+      "docs_url": null,
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://{company}.recruitee.com/api/offers/",
+      "verified_live": true,
+      "sample_fields": [
+        "id",
+        "title",
+        "slug",
+        "careers_url",
+        "careers_apply_url",
+        "published_at",
+        "close_at",
+        "created_at",
+        "employment_type_code",
+        "remote",
+        "hybrid",
+        "on_site",
+        "location",
+        "city",
+        "country_code",
+        "salary",
+        "min_hours",
+        "max_hours",
+        "department",
+        "description",
+        "requirements",
+        "open_questions",
+        "options_cv",
+        "options_cover_letter",
+        "options_phone",
+        "options_photo"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: vilgain 200 (15 offers); recruitee 404."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (public careers endpoint)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "open_questions and options_* reveal form fields before opening the form."
+  },
+  {
+    "name": "Personio career sites",
+    "url": "https://www.personio.com",
+    "kind": "ats-board",
+    "sectors": [
+      "all",
+      "DACH",
+      "UK SMEs"
+    ],
+    "reach_note": "tado and 1KOMMA5 tested.",
+    "api": {
+      "available": true,
+      "docs_url": null,
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://{company}.jobs.personio.de/xml (also .jobs.personio.com)",
+      "verified_live": true,
+      "sample_fields": [
+        "position/id",
+        "subcompany",
+        "office",
+        "department",
+        "recruitingCategory",
+        "name",
+        "employmentType",
+        "seniority",
+        "schedule",
+        "yearsOfExperience",
+        "keywords",
+        "occupation",
+        "occupationCategory",
+        "createdAt",
+        "salaryInformation/min",
+        "salaryInformation/max",
+        "salaryInformation/currencyCode",
+        "salaryInformation/type",
+        "jobDescriptions"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: tado 200, 1komma5grad 200; some slugs 404, personio returns empty <workzag-jobs/>."
+    },
+    "feeds": {
+      "type": "xml",
+      "url_pattern": "https://{company}.jobs.personio.de/xml",
+      "verified_live": true
+    },
+    "tos": {
+      "automated_search": "unknown (public XML)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": ""
+  },
+  {
+    "name": "Pinpoint career sites",
+    "url": "https://www.pinpointhq.com",
+    "kind": "ats-board",
+    "sectors": [
+      "all",
+      "UK scale-ups"
+    ],
+    "reach_note": "UK-built ATS; Thought Machine and Goodlord tested.",
+    "api": {
+      "available": true,
+      "docs_url": null,
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://{company}.pinpointhq.com/postings.json",
+      "verified_live": true,
+      "sample_fields": [
+        "data[].id",
+        "title",
+        "url",
+        "path",
+        "employment_type",
+        "employment_type_text",
+        "workplace_type",
+        "location.name",
+        "location.city",
+        "compensation",
+        "compensation_minimum",
+        "compensation_maximum",
+        "compensation_currency",
+        "compensation_frequency",
+        "compensation_visible",
+        "deadline_at",
+        "description",
+        "key_responsibilities",
+        "skills_knowledge_expertise",
+        "benefits",
+        "reporting_to"
+      ],
+      "notes": "Per-employer public board. Discovery only; applying happens on the hosted form (grey tier, user confirms submit). Live: thoughtmachine 200, goodlord 200 (6 jobs); kroo, cleo etc 404."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown (public JSON)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "compensation may be the text 'Competitive' with compensation_visible true."
+  },
+  {
+    "name": "SmartRecruiters",
+    "url": "https://jobs.smartrecruiters.com",
+    "kind": "ats-board",
+    "sectors": [
+      "all",
+      "enterprise"
+    ],
+    "reach_note": "Large employers.",
+    "api": {
+      "available": true,
+      "docs_url": "https://developers.smartrecruiters.com/docs/posting-api",
+      "auth": "none",
+      "free_tier": "free",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://api.smartrecruiters.com/v1/companies/{id}/postings",
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "From 01 §C1; not re-tested here."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed (posting API)",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-02"
+    },
+    "tier": "api",
+    "apply_mechanism": "on-site",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": ""
+  },
+  {
+    "name": "Workday career sites",
+    "url": "https://www.myworkdayjobs.com",
+    "kind": "ats-board",
+    "sectors": [
+      "enterprise",
+      "graduate schemes"
+    ],
+    "reach_note": "Large UK employers and graduate schemes.",
+    "api": {
+      "available": false,
+      "docs_url": null,
+      "auth": "none",
+      "free_tier": null,
+      "rate_limit": "poll gently",
+      "endpoint_pattern": "POST https://{tenant}.wdN.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs (undocumented)",
+      "verified_live": false,
+      "sample_fields": [],
+      "notes": "From 01 §C1; fragile; not re-tested here."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "unknown",
+      "automated_apply": "grey",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-02"
+    },
+    "tier": "grey",
+    "apply_mechanism": "on-site",
+    "account_needed": true,
+    "cv_upload_profile": false,
+    "alert_emails": true,
+    "notes": "Account per employer."
+  },
+  {
+    "name": "Home Office register of licensed sponsors",
+    "url": "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
+    "kind": "public-sector",
+    "sectors": [
+      "visa sponsorship (reference data)"
+    ],
+    "reach_note": "Daily CSV of every Worker and Temporary Worker sponsor licence holder.",
+    "api": {
+      "available": true,
+      "docs_url": "https://content-api.publishing.service.gov.uk/",
+      "auth": "none",
+      "free_tier": "free (Open Government Licence)",
+      "rate_limit": "not stated",
+      "endpoint_pattern": "https://www.gov.uk/api/content/government/publications/register-of-licensed-sponsors-workers -> details.attachments[].url (CSV, filename changes daily)",
+      "verified_live": true,
+      "sample_fields": [
+        "Organisation Name",
+        "Town/City",
+        "County",
+        "Type & Rating",
+        "Route"
+      ],
+      "notes": "Live: Content API 200, public_updated_at 2026-11-02, CSV attachment listed. CSV column names from memory, not opened (unverified)."
+    },
+    "feeds": {
+      "type": "none",
+      "url_pattern": null,
+      "verified_live": false
+    },
+    "tos": {
+      "automated_search": "allowed (OGL)",
+      "automated_apply": "n/a",
+      "quote": null,
+      "url": null,
+      "read_on": "2026-11-03"
+    },
+    "tier": "api",
+    "apply_mechanism": "redirect",
+    "account_needed": false,
+    "cv_upload_profile": false,
+    "alert_emails": false,
+    "notes": "Reference data, not a job source. Join on employer name to mark sponsor licence yes/no."
+  }
+]

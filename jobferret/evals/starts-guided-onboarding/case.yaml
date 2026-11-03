@@ -1,0 +1,17 @@
+schema_version: "1.1"
+name: starts-guided-onboarding
+expected_outcome: |
+  The response runs the `start` onboarding (or follows its steps): it checks the
+  toolchain, reads the CV it was given, drafts the profile from the CV, and asks at
+  most four questions before doing something useful. Questions are numbered, each with
+  a default and a way to skip, and never more than five appear in one message. It does
+  not ask for anything the CV already answers (the person's name, that they are in
+  Leeds, that they are a Senior Finance Analyst at Northgate Foods). It offers the
+  preferences page or chat as two ways to answer, without requiring the page. Each step
+  is announced with a one-line progress message, and the user is told once how to stop.
+  It does not demand API keys up front, does not run the full CV audit or rewrite, and
+  at most gives a short verdict (a score and three fixes). It ends with a short menu of
+  what to do next. Tone is plain and direct, with no cheerleading and no invented facts
+  about the candidate.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,517 @@
+{
+  "version": 1,
+  "source": {
+    "file": "cv/source/Hannah-Okafor-CV.pdf",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "extracted_at": "2026-11-02T14:03:00Z",
+    "extractor": "pdfplumber"
+  },
+  "sections": [
+    {
+      "name": "Profile",
+      "start_line": 4,
+      "end_line": 5
+    },
+    {
+      "name": "Skills",
+      "start_line": 7,
+      "end_line": 10
+    },
+    {
+      "name": "Experience",
+      "start_line": 12,
+      "end_line": 30
+    },
+    {
+      "name": "Education",
+      "start_line": 32,
+      "end_line": 35
+    },
+    {
+      "name": "Certifications",
+      "start_line": 36,
+      "end_line": 38
+    },
+    {
+      "name": "Volunteering",
+      "start_line": 39,
+      "end_line": 41
+    },
+    {
+      "name": "Earlier career",
+      "start_line": 42,
+      "end_line": 43
+    },
+    {
+      "name": "Interests",
+      "start_line": 44,
+      "end_line": 45
+    }
+  ],
+  "facts": [
+    {
+      "id": "F001",
+      "kind": "contact",
+      "text": "Hannah Okafor",
+      "line": 1,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "name": "Hannah Okafor"
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F002",
+      "kind": "contact",
+      "text": "Leeds | 07700 900123 | hannah.okafor@example.com | linkedin.com/in/hannah-okafor-example",
+      "line": 2,
+      "page": 1,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F003",
+      "kind": "headline",
+      "text": "Senior Finance Analyst",
+      "line": 3,
+      "page": 1,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F004",
+      "kind": "summary",
+      "text": "CIMA-qualified management accountant with eight years in FMCG, freight and social housing finance. I like work where the numbers change a decision and I can explain them plainly to non-finance colleagues.",
+      "line": 5,
+      "page": 1,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F005",
+      "kind": "skill",
+      "text": "Finance: management accounts, budgeting and forecasting, variance analysis, IFRS 15 and IFRS 16",
+      "line": 8,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "label": "Finance",
+        "items": [
+          "management accounts",
+          "budgeting and forecasting",
+          "variance analysis",
+          "IFRS 15 and IFRS 16"
+        ]
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F006",
+      "kind": "skill",
+      "text": "Systems: SAP S/4HANA, Sage 200, Power BI, Power Query, advanced Excel",
+      "line": 9,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "label": "Systems",
+        "items": [
+          "SAP S/4HANA",
+          "Sage 200",
+          "Power BI",
+          "Power Query",
+          "advanced Excel"
+        ]
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F007",
+      "kind": "skill",
+      "text": "Data: SQL (SQL Server), DAX, basic Python (pandas)",
+      "line": 10,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "label": "Data",
+        "items": [
+          "SQL (SQL Server)",
+          "DAX",
+          "basic Python (pandas)"
+        ]
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F008",
+      "kind": "other",
+      "text": "Experience",
+      "line": 12,
+      "page": 1,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F009",
+      "kind": "role",
+      "text": "Senior Finance Analyst, Northgate Foods Ltd, Leeds, Mar 2022 – Present",
+      "line": 13,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "title": "Senior Finance Analyst",
+        "employer": "Northgate Foods Ltd",
+        "location": "Leeds",
+        "start": "2022-03",
+        "end": null,
+        "current": true
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F010",
+      "kind": "bullet",
+      "text": "Automated 14 bank and intercompany reconciliations in Power Query and redesigned the month-end close timetable",
+      "line": 14,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F011",
+      "kind": "bullet",
+      "text": "Built a rolling 18-month EBITDA forecast model used for the annual budget and quarterly reforecasts",
+      "line": 15,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F012",
+      "kind": "bullet",
+      "text": "Run monthly performance reviews with 6 site general managers and agree actions with named owners for each variance",
+      "line": 16,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F013",
+      "kind": "bullet",
+      "text": "Replaced the 40-slide board pack with a Power BI report the CFO uses at the monthly board meeting",
+      "line": 17,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F014",
+      "kind": "bullet",
+      "text": "Led the finance workstream of the 2023 SAP S/4HANA migration for two sites, including cut-over testing of 1,200 open purchase orders",
+      "line": 18,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F015",
+      "kind": "bullet",
+      "text": "Coach two finance graduates through CIMA operational-level exams; both passed first time",
+      "line": 19,
+      "page": 1,
+      "parent": "F009",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F016",
+      "kind": "role",
+      "text": "Management Accountant, Pennine Freight plc, Bradford, Jul 2019 – Feb 2022",
+      "line": 21,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "title": "Management Accountant",
+        "employer": "Pennine Freight plc",
+        "location": "Bradford",
+        "start": "2019-07",
+        "end": "2022-02",
+        "current": false
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F017",
+      "kind": "bullet",
+      "text": "Prepared monthly management accounts for a £62m-turnover haulage division with 11 depots",
+      "line": 22,
+      "page": 1,
+      "parent": "F016",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F018",
+      "kind": "bullet",
+      "text": "Modelled fuel and freight-rate scenarios that supported the 2021 customer rate renegotiation",
+      "line": 23,
+      "page": 1,
+      "parent": "F016",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F019",
+      "kind": "bullet",
+      "text": "Introduced depot-level cost dashboards in Power BI, used weekly by the operations director",
+      "line": 24,
+      "page": 1,
+      "parent": "F016",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F020",
+      "kind": "bullet",
+      "text": "Reduced aged debt over 90 days from £1.1m to £380k in 12 months by agreeing payment plans with 23 customers",
+      "line": 25,
+      "page": 1,
+      "parent": "F016",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F021",
+      "kind": "role",
+      "text": "Assistant Accountant, Calder Valley Housing Association, Halifax, Sep 2016 – Jun 2019",
+      "line": 27,
+      "page": 1,
+      "parent": null,
+      "fields": {
+        "title": "Assistant Accountant",
+        "employer": "Calder Valley Housing Association",
+        "location": "Halifax",
+        "start": "2016-09",
+        "end": "2019-06",
+        "current": false
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F022",
+      "kind": "bullet",
+      "text": "Ran the purchase ledger and weekly payment runs for around 400 suppliers",
+      "line": 28,
+      "page": 1,
+      "parent": "F021",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F023",
+      "kind": "bullet",
+      "text": "Prepared balance sheet reconciliations and supported the year-end audit for three years running",
+      "line": 29,
+      "page": 1,
+      "parent": "F021",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F024",
+      "kind": "bullet",
+      "text": "Rewrote the service-charge apportionment spreadsheet so it could be checked line by line by tenants' auditors",
+      "line": 30,
+      "page": 1,
+      "parent": "F021",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F025",
+      "kind": "education",
+      "text": "BSc Accounting and Finance (2:1), University of Leeds, 2013 – 2016",
+      "line": 33,
+      "page": 2,
+      "parent": null,
+      "fields": {
+        "qualification": "BSc Accounting and Finance (2:1)",
+        "institution": "University of Leeds",
+        "start": "2013",
+        "end": "2016"
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F026",
+      "kind": "bullet",
+      "text": "Dissertation: working-capital cycles in UK grocery suppliers",
+      "line": 34,
+      "page": 2,
+      "parent": "F025",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F027",
+      "kind": "education",
+      "text": "A levels: Mathematics (A), Economics (A), Geography (B), Harrogate Grammar School, 2013",
+      "line": 35,
+      "page": 2,
+      "parent": null,
+      "fields": {
+        "qualification": "A levels",
+        "institution": "Harrogate Grammar School",
+        "end": "2013"
+      },
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F028",
+      "kind": "certification",
+      "text": "CIMA Associate Chartered Management Accountant (ACMA, CGMA), 2020",
+      "line": 37,
+      "page": 2,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F029",
+      "kind": "certification",
+      "text": "Microsoft Certified: Power BI Data Analyst Associate, 2023",
+      "line": 38,
+      "page": 2,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F030",
+      "kind": "project",
+      "text": "Volunteer treasurer, Kirkstall Community Larder, 2021 – Present",
+      "line": 40,
+      "page": 2,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F031",
+      "kind": "bullet",
+      "text": "Keep the books and prepare annual accounts for a food larder serving about 150 households a week",
+      "line": 41,
+      "page": 2,
+      "parent": "F030",
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F032",
+      "kind": "role",
+      "text": "Finance Assistant (part-time), Dales Outdoor Ltd (2015–2016); Sales Assistant, Boots, Harrogate (2012–2015)",
+      "line": 43,
+      "page": 2,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F033",
+      "kind": "interest",
+      "text": "Fell running (Yorkshire Three Peaks finisher, 2023); volunteer reader at Leeds Central Library",
+      "line": 45,
+      "page": 2,
+      "parent": null,
+      "fields": {},
+      "provenance": "cv",
+      "confirmed": true
+    },
+    {
+      "id": "F034",
+      "kind": "metric",
+      "text": "Month-end close went from 9 to 5 working days once the Power Query reconciliations went live in October 2023",
+      "line": null,
+      "page": null,
+      "parent": "F010",
+      "fields": {},
+      "provenance": "user",
+      "confirmed": true,
+      "note": {
+        "asked": "How long did month-end close take before and after the reconciliations were automated?",
+        "added_at": "2026-11-02T14:20:00Z"
+      }
+    },
+    {
+      "id": "F035",
+      "kind": "metric",
+      "text": "The FY2024 forecast landed within 2% of actual full-year EBITDA",
+      "line": null,
+      "page": null,
+      "parent": "F011",
+      "fields": {},
+      "provenance": "user",
+      "confirmed": true,
+      "note": {
+        "asked": "How close did the forecast land to actual?",
+        "added_at": "2026-11-02T14:24:00Z"
+      }
+    },
+    {
+      "id": "F036",
+      "kind": "metric",
+      "text": "The 2021 rate renegotiation saved roughly £400k a year",
+      "line": null,
+      "page": null,
+      "parent": "F018",
+      "fields": {},
+      "provenance": "user",
+      "confirmed": false,
+      "note": {
+        "asked": "What did the rate renegotiation save?",
+        "added_at": "2026-11-02T14:27:00Z"
+      }
+    }
+  ]
+}

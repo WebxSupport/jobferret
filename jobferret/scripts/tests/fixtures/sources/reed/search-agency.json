@@ -1,0 +1,21 @@
+{
+ "__note": "Synthetic agency results (postedByRecruitmentAgency=true).",
+ "results": [
+  {
+   "jobId": 55507777,
+   "employerId": 900,
+   "employerName": "Spectrum Talent Recruitment",
+   "jobTitle": "Data Analyst",
+   "locationName": "Leeds",
+   "minimumSalary": 450.0,
+   "maximumSalary": 500.0,
+   "currency": "GBP",
+   "expirationDate": "20/11/2026",
+   "date": "02/11/2026",
+   "jobDescription": "Our client requires a Data Analyst on an initial 6 month contract. Inside IR35. Active SC clearance required...",
+   "applications": 30,
+   "jobUrl": "https://www.reed.co.uk/jobs/data-analyst/55507777"
+  }
+ ],
+ "totalResults": 1
+}

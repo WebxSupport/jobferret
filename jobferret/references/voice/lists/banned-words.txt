@@ -1,0 +1,154 @@
+# banned-words.txt
+# What this is: single words that must never appear in application writing (cover letters,
+# emails, LinkedIn notes, CV profiles and bullets, form answers). Each one is a measured or
+# widely documented LLM tell, or a CV cliche a tired recruiter has read ten thousand times.
+# Match semantics: one entry per line; lowercase; matched case-insensitively as a whole word
+# (word boundaries). There are NO stems. Every inflection that matters is listed on its own
+# line, because "leverag" would not match "leveraged" under whole-word matching. Normalise
+# curly quotes to straight ones and treat a hyphen as part of the word ("cutting-edge" is one
+# token). A hit fails voice_lint check 2 (banned scan).
+# A literal use is exempt (a "game-changing" rule change in a gaming job is not a tell), so the
+# model judges each hit. The linter just reports it.
+# Source: 04 §4 "Never use: words", 04 §3 (lexical and tonal rows), 04 §2.1 (newest-model
+# vocabulary). Lines marked "from 04 §6" come from the words the worked examples cut.
+#
+# Deliberately NOT here, because they are ordinary English in some jobs:
+#   landscape, navigate   -> figurative uses are in banned-phrases.txt
+#   dynamic, journey      -> figurative uses are in banned-phrases.txt
+#   holistic              -> clinical term in nursing and social care; rationed.txt instead
+#   enhanced              -> "enhanced DBS check" is a real UK requirement
+#   elevated              -> clinical ("elevated blood pressure")
+#   empowered, empowerment, facilitated, facilitator, facilitation, utilisation, utilization
+#                         -> real terms in care, training and operations
+#   additionally          -> weak evidence alone (04 §2.1); rationed.txt instead
+#   prioritise            -> staple of Civil Service behaviour answers
+
+# --- vocabulary surges after ChatGPT (04 §2.1, §4) ---
+delve
+delves
+delved
+delving
+tapestry
+testament
+realm
+realms
+multifaceted
+robust
+robustly
+robustness
+seamless
+seamlessly
+pivotal
+crucial
+crucially
+intricate
+intricacies
+meticulous
+meticulously
+vibrant
+nestled
+paradigm
+paradigms
+invaluable
+transformative
+adept
+honed
+honing
+boasts
+
+# --- verbs that inflate (04 §4) ---
+foster
+fosters
+fostered
+fostering
+underscore
+underscores
+underscored
+underscoring
+leverage
+leverages
+leveraged
+leveraging
+spearhead
+spearheads
+spearheaded
+spearheading
+bolster
+bolsters
+bolstered
+bolstering
+garner
+garners
+garnered
+garnering
+showcase
+showcases
+showcased
+showcasing
+highlighting
+enhance
+enhances
+enhancing
+elevate
+elevates
+elevating
+unlock
+unlocks
+unlocked
+unlocking
+empower
+empowers
+empowering
+harnessed
+harnessing
+embark
+embarks
+embarked
+embarking
+resonate
+resonates
+resonated
+resonating
+facilitate
+facilitates
+facilitating
+streamline
+streamlines
+streamlined
+streamlining
+utilise
+utilises
+utilised
+utilising
+utilize
+utilizes
+utilized
+utilizing
+synergy
+synergies
+synergistic
+synergise
+synergize
+
+# --- self-labels, puffery and hype ---
+passionate
+passionately
+thrilled
+innovative
+innovatively
+proactive
+proactively
+cutting-edge
+game-changer
+game-changers
+game-changing
+ever-evolving
+fast-paced
+quietly
+
+# --- from 04 §6 (cut in the worked examples) ---
+insightful
+
+# --- connector chains (04 §3 structural row: Moreover... Furthermore...) ---
+moreover
+furthermore

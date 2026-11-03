@@ -1,0 +1,19 @@
+From: Totaljobs <jobalerts@alerts.totaljobs.com>
+To: Test User <test.user@example.com>
+Subject: Your daily job alert: Data Analyst
+Date: Mon, 02 Nov 2026 06:30:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Hi Test, here are today's matches. These links sign you in automatically.</p>
+<div>
+  <a href="https://www.totaljobs.com/account/autologin?token=FAKE-LOGIN-TOKEN-7f3a9c&amp;returnUrl=%2Fjob%2Fdata-analyst%2Fnorthgate-analytics-ltd-job108272638%3Fsrc%3Djobalert">Data Analyst</a>
+  <div>Northgate Analytics Ltd &middot; Leeds &middot; &pound;35,000 - &pound;42,000 per annum</div>
+</div>
+<div>
+  <a href="https://www.totaljobs.com/JobSeeking/Apply?JobId=108272777&amp;token=FAKE-LOGIN-TOKEN-7f3a9c">Senior Data Analyst</a>
+  <div>Spectrum Talent Recruitment &middot; Bradford &middot; Competitive</div>
+</div>
+<p><a href="https://www.totaljobs.com/account/autologin?token=FAKE-LOGIN-TOKEN-7f3a9c&amp;returnUrl=%2Fjobalerts">Manage alerts</a></p>
+</body></html>

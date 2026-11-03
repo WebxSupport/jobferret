@@ -1,0 +1,290 @@
+# uk-us-spelling.txt
+# What this is: spelling pairs for a locale-consistency check. Format: uk-form,us-form (one pair
+# per line, lowercase). voice_lint uses it for check 10 (voice match, locale part): in a UK
+# document (locale uk, or profile spelling en-GB) any us-form is a flag; in a US document any
+# uk-form is a flag. Mixed spelling inside one document is always a flag, whatever the locale.
+# The locale comes from --profile, else from config.toml [locale] default.
+# Match semantics: whole word, case-insensitive. Inflections are separate pairs because there
+# are no stems. Proper nouns are exempt (Pittsburgh Center, Barbican Centre, "Honours" in a
+# degree title such as BSc (Hons)); the model judges, the linter reports. Skip anything inside
+# a URL or email address.
+# Source: 04 §1 rule 12, 04 §2.1 (Agarwal et al.: drift toward American style), 04 §3
+# (American drift), 04 §5.3 (locale as an idiolect marker). The pairs cover words that
+# appear in CVs and letters. The clinical block is for NHS applications.
+#
+# Two blocks. The split is the comment line that matches the regex ^# === BLOCK 2 (anchored).
+#   Block 1: the forms belong to one locale each. Flag either direction.
+#   Block 2: the US form is also correct, in some uses, in UK English. Flag ONLY the UK form,
+#   and only in US documents. In UK documents never flag the US form from Block 2.
+# Reasons, so nobody "fixes" the lists later:
+#   program    correct in BOTH locales for software ("a computer program", "program the
+#              PLC"). Programme (UK) is for a plan or a series of events.
+#   licence    UK noun; "license" is the UK verb ("licensed to practise").
+#   practise   UK verb; US uses "practice" for noun and verb. UK "practice" (noun) is right.
+#   meter      UK English uses "meter" for devices ("smart meter", "gas meter"). Only "metre"
+#              (the unit) is UK-only.
+#   dialog, catalog, analog, artifact   appear in UK software writing ("dialog box").
+#   cheque     "check" is valid in the UK for verifying; only the payment sense differs.
+#   whilst, amongst, towards   UK-leaning register words; while, among and toward are
+#              correct everywhere.
+#   judgement  UK law and many UK style guides write "judgment" too.
+#   tyre, kerb UK nouns; "tire" and "curb" are UK verbs.
+#   enquiry    UK English uses both; "inquiry" is standard in formal investigations.
+#   speciality UK clinical writing uses both "speciality" and "specialty".
+#   ageing, learnt   UK English accepts "aging" and "learned".
+#   mum        US "mom". Rare outside personal stories.
+#
+# === BLOCK 1: flag either direction ===
+
+# -ise / -ize verbs and their forms (the biggest source of drift)
+organise,organize
+organised,organized
+organises,organizes
+organising,organizing
+organisation,organization
+organisations,organizations
+organisational,organizational
+recognise,recognize
+recognised,recognized
+recognising,recognizing
+realise,realize
+realised,realized
+realising,realizing
+prioritise,prioritize
+prioritised,prioritized
+prioritising,prioritizing
+prioritisation,prioritization
+summarise,summarize
+summarised,summarized
+summarising,summarizing
+specialise,specialize
+specialised,specialized
+specialising,specializing
+optimise,optimize
+optimised,optimized
+optimising,optimizing
+optimisation,optimization
+minimise,minimize
+minimised,minimized
+maximise,maximize
+maximised,maximized
+standardise,standardize
+standardised,standardized
+standardisation,standardization
+customise,customize
+customised,customized
+customisation,customization
+emphasise,emphasize
+emphasised,emphasized
+apologise,apologize
+authorise,authorize
+authorised,authorized
+authorisation,authorization
+categorise,categorize
+categorised,categorized
+centralise,centralize
+centralised,centralized
+characterise,characterize
+criticise,criticize
+finalise,finalize
+finalised,finalized
+finalising,finalizing
+formalise,formalize
+harmonise,harmonize
+mobilise,mobilize
+mobilised,mobilized
+mobilisation,mobilization
+modernise,modernize
+modernised,modernized
+modernisation,modernization
+normalise,normalize
+personalise,personalize
+personalised,personalized
+personalisation,personalization
+rationalise,rationalize
+stabilise,stabilize
+stabilised,stabilized
+synchronise,synchronize
+visualise,visualize
+visualised,visualized
+visualisation,visualization
+visualisations,visualizations
+digitise,digitize
+digitised,digitized
+digitisation,digitization
+digitalisation,digitalization
+capitalise,capitalize
+monetise,monetize
+operationalise,operationalize
+globalisation,globalization
+localisation,localization
+familiarise,familiarize
+familiarised,familiarized
+generalise,generalize
+scrutinise,scrutinize
+sanitise,sanitize
+mechanise,mechanize
+commercialise,commercialize
+internationalise,internationalize
+
+# -yse / -yze verbs
+analyse,analyze
+analysed,analyzed
+analysing,analyzing
+analyser,analyzer
+catalyse,catalyze
+paralyse,paralyze
+dialyse,dialyze
+
+# -our / -or
+colour,color
+colours,colors
+coloured,colored
+behaviour,behavior
+behaviours,behaviors
+behavioural,behavioral
+favour,favor
+favours,favors
+favoured,favored
+favourite,favorite
+favourable,favorable
+labour,labor
+honour,honor
+honours,honors
+honoured,honored
+humour,humor
+neighbour,neighbor
+neighbourhood,neighborhood
+endeavour,endeavor
+rumour,rumor
+harbour,harbor
+flavour,flavor
+tumour,tumor
+odour,odor
+
+# -re / -er
+centre,center
+centres,centers
+centred,centered
+fibre,fiber
+litre,liter
+litres,liters
+theatre,theater
+calibre,caliber
+
+# doubled consonants before a suffix
+modelling,modeling
+modelled,modeled
+travelled,traveled
+travelling,traveling
+traveller,traveler
+travellers,travelers
+cancelled,canceled
+cancelling,canceling
+labelled,labeled
+labelling,labeling
+counsellor,counselor
+counsellors,counselors
+counselling,counseling
+signalling,signaling
+signalled,signaled
+fuelled,fueled
+fuelling,fueling
+channelled,channeled
+tunnelled,tunneled
+levelled,leveled
+levelling,leveling
+totalled,totaled
+marshalled,marshaled
+equalled,equaled
+
+# single l / double l
+fulfil,fulfill
+fulfilment,fulfillment
+enrol,enroll
+enrolment,enrollment
+skilful,skillful
+instalment,installment
+appal,appall
+
+# -ce / -se
+defence,defense
+offence,offense
+pretence,pretense
+
+# other
+acknowledgement,acknowledgment
+manoeuvre,maneuver
+manoeuvres,maneuvers
+jewellery,jewelry
+aeroplane,airplane
+pyjamas,pajamas
+mould,mold
+sceptical,skeptical
+sceptic,skeptic
+aluminium,aluminum
+grey,gray
+maths,math
+per cent,percent
+sulphur,sulfur
+plough,plow
+
+# clinical spellings (NHS applications)
+paediatric,pediatric
+paediatrics,pediatrics
+anaesthetic,anesthetic
+anaesthetist,anesthetist
+anaesthesia,anesthesia
+orthopaedic,orthopedic
+orthopaedics,orthopedics
+haemoglobin,hemoglobin
+haematology,hematology
+haemorrhage,hemorrhage
+anaemia,anemia
+anaemic,anemic
+oedema,edema
+oestrogen,estrogen
+gynaecology,gynecology
+gynaecological,gynecological
+diarrhoea,diarrhea
+foetal,fetal
+foetus,fetus
+leukaemia,leukemia
+ischaemia,ischemia
+ischaemic,ischemic
+oesophagus,esophagus
+oesophageal,esophageal
+
+# === BLOCK 2: flag the UK form in US documents only ===
+programme,program
+programmes,programs
+licence,license
+licences,licenses
+practise,practice
+practised,practiced
+practising,practicing
+cheque,check
+cheques,checks
+judgement,judgment
+judgements,judgments
+metre,meter
+metres,meters
+catalogue,catalog
+catalogues,catalogs
+dialogue,dialog
+analogue,analog
+artefact,artifact
+artefacts,artifacts
+tyre,tire
+tyres,tires
+kerb,curb
+enquiry,inquiry
+enquiries,inquiries
+speciality,specialty
+specialities,specialties
+ageing,aging
+learnt,learned
+whilst,while
+amongst,among
+towards,toward
+mum,mom

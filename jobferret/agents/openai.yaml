@@ -1,0 +1,24 @@
+# JobFerret: Codex metadata (agents/openai.yaml)
+#
+# Checked 2026-11-03 against https://learn.chatgpt.com/docs/build-skills (references/platforms.md §6):
+#   interface.display_name, short_description, icon_small, icon_large, brand_color, default_prompt
+#   policy.allow_implicit_invocation (boolean, default true; explicit $jobferret always works)
+#
+# Not declared here on purpose:
+#   - dependencies.tools. The documented MCP form uses transport + url. A stdio server such as
+#     Playwright (npx) has no documented form, so browser tools are added by the user:
+#       codex mcp add playwright npx "@playwright/mcp@latest"
+#     (add --extension to use the user's own Chrome), or by enabling the Codex Chrome extension.
+#     See references/platforms.md section 2.4.
+#   - Python requirement: Python 3.11+ with pdfplumber, pypdf, python-docx
+#     (pip install -r scripts/requirements.txt). No machine-readable field exists for it.
+#   - Icons: no assets are shipped yet.
+
+interface:
+  display_name: "JobFerret"
+  short_description: "Finds UK jobs, tailors your CV and prepares applications; you confirm every submit."
+  default_prompt: "Run JobFerret start."
+
+policy:
+  # Safe: nothing is submitted without a per-item yes (G1).
+  allow_implicit_invocation: true

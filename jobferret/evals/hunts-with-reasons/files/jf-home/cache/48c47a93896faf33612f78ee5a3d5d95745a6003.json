@@ -1,0 +1,10 @@
+{
+ "url": "https://jobs.example.ac.uk/feed",
+ "method": "GET",
+ "status": 200,
+ "headers": {},
+ "fetched_at": "2026-11-03T03:16:23Z",
+ "fetched_ts": 1793675783.847068,
+ "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Synthetic RSS 2.0 job feed -->\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">\n  <channel>\n    <title>Example university jobs: data</title>\n    <link>https://jobs.example.ac.uk/</link>\n    <description>New vacancies</description>\n    <item>\n      <title>Research Data Analyst at University of Example</title>\n      <link>https://jobs.example.ac.uk/job/ABC123/research-data-analyst?utm_source=rss</link>\n      <description>&lt;p&gt;Grade 7, £37,099 to £44,263 per annum. Fixed term for 24 months. SQL and R.&lt;/p&gt;</description>\n      <pubDate>Mon, 02 Nov 2026 09:00:00 +0000</pubDate>\n      <guid>https://jobs.example.ac.uk/job/ABC123</guid>\n    </item>\n    <item>\n      <title>Library Assistant</title>\n      <link>https://jobs.example.ac.uk/job/ABC124/library-assistant</link>\n      <description>Part-time, 18 hours per week.</description>\n      <pubDate>Sun, 01 Nov 2026 09:00:00 +0000</pubDate>\n      <dc:creator>University of Example</dc:creator>\n    </item>\n  </channel>\n</rss>\n",
+ "primed": true
+}

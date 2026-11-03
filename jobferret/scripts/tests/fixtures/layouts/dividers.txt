@@ -1,0 +1,18 @@
+Sam Example
+sam@example.com | 07700 900456
+____________________
+Profile
+Web developer with ten years of client work and a small agency.
+--------------------
+Experience
+=====
+********
+Senior Developer, Acme Ltd, Leeds    Mar 2022 - Present
+- Built the checkout rewrite.
+- Led two developers.
+• • • • •
+Education
+~~~~~~~~~~
+BSc Computer Science, University of Leeds, 2010 - 2013
+Skills
+Python, TypeScript, SQL

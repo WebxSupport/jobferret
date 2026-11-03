@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic RSS 2.0 job feed -->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Example university jobs: data</title>
+    <link>https://jobs.example.ac.uk/</link>
+    <description>New vacancies</description>
+    <item>
+      <title>Research Data Analyst at University of Example</title>
+      <link>https://jobs.example.ac.uk/job/ABC123/research-data-analyst?utm_source=rss</link>
+      <description>&lt;p&gt;Grade 7, £37,099 to £44,263 per annum. Fixed term for 24 months. SQL and R.&lt;/p&gt;</description>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0000</pubDate>
+      <guid>https://jobs.example.ac.uk/job/ABC123</guid>
+    </item>
+    <item>
+      <title>Library Assistant</title>
+      <link>https://jobs.example.ac.uk/job/ABC124/library-assistant</link>
+      <description>Part-time, 18 hours per week.</description>
+      <pubDate>Sun, 01 Nov 2026 09:00:00 +0000</pubDate>
+      <dc:creator>University of Example</dc:creator>
+    </item>
+  </channel>
+</rss>

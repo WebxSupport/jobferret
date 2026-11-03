@@ -1,0 +1,23 @@
+{
+ "__note": "Synthetic job detail, fields from Reed's docs.",
+ "employerId": 401,
+ "employerName": "Calder Water Services",
+ "jobId": 55501234,
+ "jobTitle": "Data Analyst",
+ "locationName": "Leeds",
+ "minimumSalary": 36000.0,
+ "maximumSalary": 40000.0,
+ "yearlyMinimumSalary": 36000.0,
+ "yearlyMaximumSalary": 40000.0,
+ "currency": "GBP",
+ "salaryType": "per annum",
+ "salary": "£36,000 - £40,000 per annum",
+ "datePosted": "02/11/2026",
+ "expirationDate": "15/12/2026",
+ "externalUrl": "https://boards.greenhouse.io/calderwater/jobs/4021?gh_src=reed",
+ "jobUrl": "https://www.reed.co.uk/jobs/data-analyst/55501234",
+ "partTime": false,
+ "fullTime": true,
+ "contractType": "Permanent",
+ "jobDescription": "<p>Join our data team to report on network performance.</p><ul><li>SQL</li><li>Power BI</li><li>Python</li></ul><p>Hybrid, two days in Leeds. We hold a sponsor licence and visa sponsorship is available.</p>"
+}

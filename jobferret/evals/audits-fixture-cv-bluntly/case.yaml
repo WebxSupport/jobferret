@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: audits-fixture-cv-bluntly
+expected_outcome: |
+  The response runs (or reproduces the logic of) the CV extraction and scores the CV on
+  the ten rubric dimensions with an overall score out of 100. The three highest-leverage
+  fixes come first. Findings quote or point to specific lines and bullets from the CV
+  rather than generic advice. Relevance is judged against the stated target (Senior Data
+  Analyst, London, fintech/scale-ups). It lists concrete metric-interview questions
+  grouped by role, batched rather than one at a time. It does not rewrite the CV, since
+  the user asked it not to. Tone is direct: no praise padding, consequences stated.
+  Nothing in the feedback invents facts about the candidate.
+context:
+  scaffold_script: place-files.sh

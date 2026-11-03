@@ -1,0 +1,11 @@
+# group: feelings = excited | keen | eager
+# group: intensifiers = really | very
+excited
+keen
+eager
+really
+very
+look forward to
+!
+;
+—

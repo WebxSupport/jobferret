@@ -1,0 +1,5 @@
+organise,organize
+colour,color
+# === BLOCK 2: one way
+programme,program
+whilst,while

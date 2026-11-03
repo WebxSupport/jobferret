@@ -1,0 +1,38 @@
+{
+ "__note": "Synthetic direct-employer results. Fields from reed.co.uk/developers/jobseeker (read 3 Nov 2026) plus date, expirationDate, jobUrl, currency reported by third-party clients.",
+ "results": [
+  {
+   "jobId": 55501234,
+   "employerId": 401,
+   "employerName": "Calder Water Services",
+   "employerProfileId": null,
+   "jobTitle": "Data Analyst",
+   "locationName": "Leeds",
+   "minimumSalary": 36000.0,
+   "maximumSalary": 40000.0,
+   "currency": "GBP",
+   "expirationDate": "15/12/2026",
+   "date": "02/11/2026",
+   "jobDescription": "Join our data team to report on network performance. SQL, Power BI and Python...",
+   "applications": 4,
+   "jobUrl": "https://www.reed.co.uk/jobs/data-analyst/55501234"
+  },
+  {
+   "jobId": 55501299,
+   "employerId": 402,
+   "employerName": "Pennine Digital",
+   "jobTitle": "Junior Data Analyst",
+   "locationName": "Halifax",
+   "minimumSalary": null,
+   "maximumSalary": null,
+   "currency": "GBP",
+   "expirationDate": "01/12/2026",
+   "date": "01/11/2026",
+   "jobDescription": "Entry-level analyst role, Excel and SQL...",
+   "applications": 12,
+   "jobUrl": "https://www.reed.co.uk/jobs/junior-data-analyst/55501299"
+  }
+ ],
+ "ambiguousLocations": [],
+ "totalResults": 2
+}

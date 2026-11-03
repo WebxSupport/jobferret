@@ -1,0 +1,69 @@
+# openers.txt
+# What this is: sentence-start patterns that must not open a document. They open with the
+# writer's emotions, the act of writing, the job title read back, or a pleasantry (04 §4
+# "Openers to avoid"). A hit is voice_lint check 8 (ends).
+# Match semantics: one entry per line; lowercase; matched case-insensitively as a PREFIX of the
+# first sentence of the body, after the greeting line ("Dear Hannah,", "Hi Tom,") and any
+# subject line are removed. Whole-word match at the end of the entry. Normalise curly quotes.
+# For email and follow-up formats, also test the first sentence after the greeting, since there
+# the greeting is a separate line.
+# Severity: every entry fails the check, except "as a" and "as an", which only warn. "As a
+# Ferncroft customer since 2023, I..." can be a good opener; "As a passionate professional..."
+# cannot. The model reads the warning and decides.
+#
+# Not literal, so the linter handles it separately (structural):
+#   "with" + digit + "years" or "with 5+ years" at the start, for example "With 8 years of
+#   experience in...". Use the regex  ^with\s+\d+\+?\s+years  . The literal entries below cover
+#   the spelled-out forms ("with over", "with more than") and "with my".
+# Source: 04 §4 "Openers to avoid", 04 §3 (tonal: pleasantry opener), 04 §6.2.
+
+# --- the act of writing ---
+i am writing
+i'm writing
+i wanted to reach out
+i am reaching out
+i'm reaching out
+i would like to apply
+i wish to apply
+i am applying for
+my name is
+
+# --- the writer's feelings ---
+i am excited
+i'm excited
+i am thrilled
+i'm thrilled
+i am delighted
+i'm delighted
+i am pleased to
+i'm pleased to
+i am passionate
+i'm passionate
+i was excited
+i was thrilled
+
+# --- self-label openers ---
+as a
+as an
+i am a highly
+i'm a highly
+i am a passionate
+i am a motivated
+i am a results-driven
+with over
+with more than
+with my
+with a proven
+
+# --- pleasantries and hooks ---
+hi! i hope
+hello! i hope
+i hope
+hope you
+i trust
+i came across
+i recently came across
+i stumbled upon
+i noticed your
+are you looking for
+to whom it may concern

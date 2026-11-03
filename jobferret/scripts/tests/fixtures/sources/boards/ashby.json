@@ -1,0 +1,67 @@
+{
+ "apiVersion": "1",
+ "jobs": [
+  {
+   "id": "9dca0702-4f87-4b20-942f-369695629590",
+   "title": "SEO Manager",
+   "department": "Marketing",
+   "team": "SEO",
+   "employmentType": "FullTime",
+   "location": "London",
+   "shouldDisplayCompensationOnJobPostings": false,
+   "secondaryLocations": [],
+   "publishedAt": "2026-06-10T12:22:54.287+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Hybrid",
+   "address": {
+    "postalAddress": {
+     "addressRegion": "Greater London",
+     "addressCountry": "United Kingdom",
+     "addressLocality": "London"
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/synthesia/9dca0702-4f87-4b20-942f-369695629590",
+   "applyUrl": "https://jobs.ashbyhq.com/synthesia/9dca0702-4f87-4b20-942f-369695629590/application",
+   "descriptionHtml": "<p style=\"min-height:1.5em\">Synthesia is the world’s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. </p><p style=\"min-height:1.5em\">As AI continues to shape the way...",
+   "descriptionPlain": "Synthesia is the world’s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. \n\nAs AI continues to shape the way we live and work, Synthesia develops products to enhance ...",
+   "compensation": {
+    "compensationTierSummary": null,
+    "scrapeableCompensationSalarySummary": null,
+    "compensationTiers": [],
+    "summaryComponents": []
+   }
+  },
+  {
+   "id": "848ccd2d-a001-436a-953f-452898f49ebe",
+   "title": "Principal Product Marketing Manager",
+   "department": "Marketing",
+   "team": "Product Marketing",
+   "employmentType": "FullTime",
+   "location": "London",
+   "shouldDisplayCompensationOnJobPostings": false,
+   "secondaryLocations": [],
+   "publishedAt": "2026-06-22T13:27:37.664+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Hybrid",
+   "address": {
+    "postalAddress": {
+     "addressRegion": "Greater London",
+     "addressCountry": "United Kingdom",
+     "addressLocality": "London"
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/synthesia/848ccd2d-a001-436a-953f-452898f49ebe",
+   "applyUrl": "https://jobs.ashbyhq.com/synthesia/848ccd2d-a001-436a-953f-452898f49ebe/application",
+   "descriptionHtml": "<p style=\"min-height:1.5em\">Synthesia is the world’s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. </p><p style=\"min-height:1.5em\">As AI continues to shape the way...",
+   "descriptionPlain": "Synthesia is the world’s leading AI video platform for business, used by over 90% of the Fortune 100. Founded in 2017, the company is headquartered in London, with offices and teams across Europe and the US. \n\nAs AI continues to shape the way we live and work, Synthesia develops products to enhance ...",
+   "compensation": {
+    "compensationTierSummary": null,
+    "scrapeableCompensationSalarySummary": null,
+    "compensationTiers": [],
+    "summaryComponents": []
+   }
+  }
+ ]
+}

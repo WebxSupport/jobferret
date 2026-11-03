@@ -1,0 +1,148 @@
+# banned-phrases.txt
+# What this is: multi-word phrases that must never appear in application writing. Openers and
+# closers that are banned wherever they sit are here too; openers.txt and closers.txt add
+# position-aware patterns on top.
+# Match semantics: one entry per line; lowercase; matched case-insensitively with word
+# boundaries at both ends; internal spaces match any run of whitespace (including a line break).
+# Normalise curly quotes to straight ones before matching. A hit fails voice_lint check 2.
+# Literal uses are exempt (a "navigate the" instruction for a satnav trainer), so the model
+# judges each hit.
+# Source: 04 §4 "Never use: phrases", 04 §3 (tell tables), and the cut-lists in 04 §6. The
+# figurative uses of landscape, navigate, dynamic and journey (04 §4 "figurative", "about
+# yourself", "career sense") are listed here as phrases because the bare words are ordinary.
+
+# --- openers and pleasantries (04 §4, §3 tonal) ---
+i am writing to express my interest
+i am writing to apply
+i am excited to apply
+i was excited to see
+i hope this email finds you well
+i hope this message finds you well
+i hope you are doing well
+i hope you are well
+i hope you're well
+hope this finds you well
+came across your profile
+in today's fast-paced world
+in today's competitive
+
+# --- self-labels and CV filler (04 §4) ---
+proven track record
+results-driven
+detail-oriented
+team player
+hit the ground running
+think outside the box
+wear many hats
+unique blend of
+ideal candidate
+add value
+make an impact
+highly motivated
+valuable asset
+valuable addition
+extensive experience
+strong analytical skills
+excellent communication skills
+keen attention to detail
+industry leader
+customer-centric
+perfect opportunity
+meaningful contribution
+drive meaningful change
+clear and concise manner
+strive for excellence
+encountered a challenge
+learned valuable lessons
+learnt valuable lessons
+
+# --- company flattery and values talk (04 §4, §6) ---
+aligns with my values
+align perfectly
+skills align
+align with your needs
+deeply resonates
+strong enthusiasm
+solidified my enthusiasm
+more confident than ever
+dynamic culture
+innovative approach
+
+# --- confidence and closers (04 §4) ---
+i am confident that i would be
+i believe i would be a great fit
+i would welcome the opportunity
+thank you for your time and consideration
+please do not hesitate to contact me
+rest assured
+at the end of the day
+in conclusion
+to summarise
+to summarize
+
+# --- significance and attribution tics (04 §3 lexical, §4) ---
+it is worth noting
+it's important to note
+plays a vital role
+serves as a testament
+serves as
+a testament to
+industry experts agree
+matters because
+the single most
+less like a
+not simply
+not just about
+
+# --- jargon (04 §4) ---
+circle back
+circling back
+touch base
+status of my candidacy
+reiterate my
+
+# --- figurative "landscape" (04 §4) ---
+dynamic landscape
+evolving landscape
+changing landscape
+ever-changing landscape
+digital landscape
+transform the landscape
+
+# --- figurative "navigate" (04 §4) ---
+navigate the
+navigating the
+navigate complex
+navigating complex
+navigate challenges
+navigating challenges
+
+# --- figurative "journey" (04 §4) ---
+career journey
+professional journey
+my journey
+your journey
+learning journey
+
+# --- "dynamic" about yourself or the employer (04 §4) ---
+dynamic professional
+dynamic environment
+dynamic team
+dynamic role
+
+# --- networking and thank-you padding (04 §6.3, §6.4, §6.7, §6.8) ---
+like-minded individuals
+expand my professional network
+pick your brain
+explore synergies
+explore potential opportunities
+additional insight
+such an important topic
+fantastic post
+heartfelt thanks
+incredibly valuable
+your busy schedule
+thank you so much for taking the time
+would be delighted to
+super excited
+enhanced my

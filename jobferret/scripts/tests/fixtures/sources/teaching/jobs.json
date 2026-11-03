@@ -1,0 +1,132 @@
+{
+ "info": {
+  "title": "GOV UK - Teaching Vacancies",
+  "license": {
+   "name": "Open Government License",
+   "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+  }
+ },
+ "data": [
+  {
+   "@context": "http://schema.org",
+   "@type": "JobPosting",
+   "title": "Assistant Vice Principal - Behaviour and Safeguarding",
+   "jobBenefits": null,
+   "datePosted": "2026-11-03",
+   "description": "<p>\r\n</p><p>Why choose Dixons McMillan Academy?</p><ul><li>We believe that people, more than strategy, create value - we all belong and grow together</li><li>'9 in 10' for teachers: our innovative strategy providing greater flexibility and agency </li><li>Culture of high expectations; teachers can teach and students can learn</li><li>Highly effective and tailored CPD: 100% of teachers believe they are a better teacher since starting with us</li><li>A real focus on healthy and efficient systems: ...",
+   "occupationalCategory": "assistant_headteacher",
+   "directApply": false,
+   "employmentType": [
+    "FULL_TIME"
+   ],
+   "industry": "Education",
+   "jobLocation": {
+    "@type": "Place",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Bradford",
+     "addressRegion": "Yorkshire and the Humber",
+     "streetAddress": "Trinity Road",
+     "postalCode": "BD5 0JD",
+     "addressCountry": "GB"
+    }
+   },
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/assistant-vice-principal-behaviour-and-safeguarding-dixons-mcmillan-academy",
+   "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Dixons McMillan Academy",
+    "sameAs": "http://www.dixonsma.com/",
+    "identifier": "141002",
+    "description": null,
+    "logo": "/assets/images/govuk-icon-180-e3675089.png"
+   },
+   "validThrough": "2026-11-17T23:59:00+00:00"
+  },
+  {
+   "@context": "http://schema.org",
+   "@type": "JobPosting",
+   "title": "Teacher of History",
+   "jobBenefits": null,
+   "datePosted": "2026-11-03",
+   "description": "<p>\r\n\r\n\r\n</p><p>Essential Knowledge and Skills:</p><p>\r\n\r\n</p><ul type=\"disc\">\r\n <li>Strong subject knowledge in History.</li>\r\n <li>Ability to teach History effectively\r\n     across Key Stage 3 and Key Stage 4.</li>\r\n <li>Knowledge of current curriculum\r\n     requirements and assessment practices.</li>\r\n <li>Ability to deliver engaging lessons that\r\n     promote high levels of student progress.</li>\r\n <li>Strong classroom management skills.</li>\r\n <li>Excellent communication and interpersonal\r\n...",
+   "occupationalCategory": "teacher",
+   "directApply": true,
+   "employmentType": [
+    "FULL_TIME"
+   ],
+   "industry": "Education",
+   "jobLocation": {
+    "@type": "Place",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Birmingham",
+     "addressRegion": "West Midlands",
+     "streetAddress": "Portland Road",
+     "postalCode": "B16 9GD",
+     "addressCountry": "GB"
+    }
+   },
+   "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "GBP",
+    "value": {
+     "@type": "QuantitativeValue",
+     "value": "MPS / UPS",
+     "unitText": "YEAR"
+    }
+   },
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/teacher-of-history-george-dixon-academy",
+   "hiringOrganization": {
+    "@type": "Organization",
+    "name": "George Dixon Academy",
+    "sameAs": "http://www.georgedixonacademy.com",
+    "identifier": "138695",
+    "description": null,
+    "logo": "/assets/images/govuk-icon-180-e3675089.png"
+   },
+   "validThrough": "2026-11-20T12:00:00+00:00"
+  },
+  {
+   "@context": "http://schema.org",
+   "@type": "JobPosting",
+   "title": "KS1 Class Teacher",
+   "jobBenefits": null,
+   "datePosted": "2026-11-03",
+   "description": "<p>We are looking for someone who:</p><ul><li><p><span style=\"font-size: 1.1875rem;\">Is aspiring to become, if not already, an\r\nexcellent teacher;</span></p></li><li>Is flexible, enthusiastic and willing to share\r\nideas;</li><li>Is committed to supporting and enhancing the\r\nschool's positive and inclusive culture;</li><li>Is resourceful and dynamic;</li><li>Has high expectations of learning, achievement and\r\nbehaviour;</li><li>Is committed to safeguarding the welfare of all\r\nyoung people;</li><l...",
+   "occupationalCategory": "teacher",
+   "directApply": false,
+   "employmentType": [
+    "FULL_TIME"
+   ],
+   "industry": "Education",
+   "jobLocation": {
+    "@type": "Place",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Warwick",
+     "addressRegion": "West Midlands",
+     "streetAddress": "All Saints Road",
+     "postalCode": "CV34 5NH",
+     "addressCountry": "GB"
+    }
+   },
+   "url": "https://teaching-vacancies.service.gov.uk/jobs/ks1-class-teacher-emscote-infant-school",
+   "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Emscote Infant School",
+    "sameAs": "http://www.allsaintsemscotefederation.co.uk",
+    "identifier": "125566",
+    "description": null,
+    "logo": "/assets/images/govuk-icon-180-e3675089.png"
+   },
+   "validThrough": "2026-11-27T12:00:00+00:00"
+  }
+ ],
+ "links": {
+  "next": null
+ },
+ "meta": {
+  "totalPages": 1,
+  "count": 3
+ }
+}

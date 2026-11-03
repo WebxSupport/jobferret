@@ -1,0 +1,10 @@
+{
+ "url": "https://assets.publishing.service.gov.uk/media/6ae84bbe713f8880fe54624f/SP_-_Worker_and_Temporary_Worker_Web_Register_-_2026-11-02.csv",
+ "method": "GET",
+ "status": 200,
+ "headers": {},
+ "fetched_at": "2026-11-03T03:16:23Z",
+ "fetched_ts": 1793675783.8576095,
+ "body": "Organisation Name,Town/City,County,Type & Rating,Route\n Calder Water Services Ltd,Leeds,West Yorkshire,Worker (A rating),Skilled Worker\nNorthgate Analytics Limited ,Leeds,,Worker (A rating),Skilled Worker\nBRANOS OXFORD LTD T/A LILO,Oxford,,Worker (A rating),Skilled Worker\nExample Health & Care CIC,Bradford,,Worker (A rating),Health and Care Worker\n\"Smith, Jones and Partners LLP\",London,,Worker (A rating),Skilled Worker\n",
+ "primed": true
+}

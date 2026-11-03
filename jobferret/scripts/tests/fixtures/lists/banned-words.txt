@@ -1,0 +1,5 @@
+# test banned words
+leverage
+leveraged
+spearheaded
+robust

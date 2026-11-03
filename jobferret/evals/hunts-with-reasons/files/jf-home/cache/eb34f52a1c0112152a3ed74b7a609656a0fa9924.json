@@ -1,0 +1,10 @@
+{
+ "url": "https://www.gov.uk/api/content/government/publications/register-of-licensed-sponsors-workers",
+ "method": "GET",
+ "status": 200,
+ "headers": {},
+ "fetched_at": "2026-11-03T03:16:23Z",
+ "fetched_ts": 1793675783.8549683,
+ "body": "{\n \"base_path\": \"/government/publications/register-of-licensed-sponsors-workers\",\n \"public_updated_at\": \"2026-11-02T08:39:02+00:00\",\n \"details\": {\n  \"attachments\": [\n   {\n    \"title\": \"Register of Worker and Temporary Worker licensed sponsors\",\n    \"url\": \"https://assets.publishing.service.gov.uk/media/6ae84bbe713f8880fe54624f/SP_-_Worker_and_Temporary_Worker_Web_Register_-_2026-11-02.csv\",\n    \"content_type\": \"text/csv\",\n    \"filename\": \"SP_-_Worker_and_Temporary_Worker_Web_Register_-_2026-11-02.csv\"\n   }\n  ]\n }\n}\n",
+ "primed": true
+}

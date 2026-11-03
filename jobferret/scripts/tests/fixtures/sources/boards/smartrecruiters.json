@@ -1,0 +1,17 @@
+{
+ "__note": "Synthetic. Shape of api.smartrecruiters.com/v1/companies/{id}/postings as documented; not re-tested live.",
+ "offset": 0, "limit": 100, "totalFound": 2,
+ "content": [
+  {"id": "744000012345678", "name": "Finance Business Partner", "uuid": "0b9f-fake", "refNumber": "REF123",
+   "company": {"identifier": "ExampleRetailUK", "name": "Example Retail UK"},
+   "releasedDate": "2026-10-28T09:00:00.000Z",
+   "location": {"city": "Leeds", "region": "England", "country": "gb", "remote": false, "fullLocation": "Leeds, England, United Kingdom"},
+   "industry": {"label": "Retail"}, "department": {"label": "Finance"},
+   "typeOfEmployment": {"label": "Full-time"}, "experienceLevel": {"label": "Mid-Senior Level"}},
+  {"id": "744000012345679", "name": "Store Data Analyst (Part-time)", "uuid": "0ba0-fake", "refNumber": "REF124",
+   "company": {"identifier": "ExampleRetailUK", "name": "Example Retail UK"},
+   "releasedDate": "2026-11-01T09:00:00.000Z",
+   "location": {"city": "Manchester", "region": "England", "country": "gb", "remote": true},
+   "typeOfEmployment": {"label": "Part-time"}}
+ ]
+}

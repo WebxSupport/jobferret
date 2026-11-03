@@ -1,0 +1,53 @@
+# closers.txt
+# What this is: phrases that must not appear in the final paragraph. A closing summary,
+# a stock thank-you or a stock invitation reads as a template (04 §4 "Closers to avoid").
+# A hit is voice_lint check 8 (ends).
+# Match semantics: one entry per line; lowercase; matched case-insensitively with word
+# boundaries, but only inside the LAST paragraph of the body (the text after the final blank
+# line, before the sign-off block "Yours sincerely," / "Thanks," / "Best," and the name).
+# Normalise curly quotes. "overall" is checked in the last paragraph only, because it is
+# ordinary English elsewhere.
+#
+# Not literal, so the linter handles it separately (structural):
+#   Recap detection. A last paragraph that repeats three or more content words from the first
+#   paragraph, or that starts "In summary" / "To sum up", is a recap. The model rewrites it to end
+#   on an ask, an offer, a plain fact or a sign-off (04 §7 step 8).
+# Source: 04 §4 "Closers to avoid", 04 §6.1 and §6.8 (close pairs).
+
+# --- recaps ---
+in conclusion
+in summary
+to sum up
+to summarise
+to summarize
+overall
+
+# --- stock thank-yous ---
+thank you for your time and consideration
+thank you for your consideration
+thank you for considering
+thank you in advance
+many thanks in advance
+thanks in advance
+
+# --- stock invitations ---
+please don't hesitate
+please do not hesitate
+don't hesitate to
+do not hesitate to
+let me know if you have any questions
+should you require any further information
+any further information
+feel free to contact me
+
+# --- stock enthusiasm and promises ---
+i look forward to discussing how
+i look forward to the opportunity
+i would welcome the opportunity
+i would love the opportunity
+i am confident that
+contribute to your team's success
+contribute to your success
+contribute to your organisation
+contribute to your organization
+your team's success

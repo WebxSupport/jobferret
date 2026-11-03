@@ -1,0 +1,23 @@
+CURRICULUM VITAE
+PERSONAL INFORMATION
+Full name : Priya Example
+Date of birth : 01/03/1985
+Email : priya@example.com
+CAREER OBJECTIVE
+- To work as a senior accountant in a growing company.
+WORKING EXPERIENCE
+ From 02/2022 to present: Oracle ERP Consultant in Harbour Group Ltd:
+- Supported finance teams on Oracle purchasing and order management.
+- Wrote the user guide for the new approvals process.
+ From 01/06/2018 to 06/2021: Accountant at Northern Pharma Company Limited
+• Managed inventory and cost analysis.
+• Closed AR, AP and GL every month.
+Position: Software Engineer
+Durations: 2019/02 – Now
+- Fixed bugs in the billing module.
+Mercia Digital Ltd, Leeds
+09/2015 – 12/2017 •Managed the office network for 40 staff.
+• Set up the backup system.
+Skills
+Programming languages
+Java, SQL, Python

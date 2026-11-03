@@ -1,0 +1,164 @@
+# UK job-advert phrases that screen.py looks for (research/05 section 5).
+#
+# Every value is a list of lower-case Python regular expressions with word boundaries,
+# matched against the lower-cased title and description. Literal strings ('...') keep
+# the backslashes as written. Order inside a list does not matter. When you add a phrase,
+# add a test case in tests/test_screen.py.
+#
+# These are signals, not verdicts. screen.py excludes only on the hard ones its rules name
+# (no sponsorship when the user needs it, active clearance the user lacks, unpaid,
+# commission-only); everything else becomes a flag the user can check.
+
+[sponsorship]
+# 05 section 5.5, negative wording
+not_offered = [
+  '\bunable to (?:offer|provide|support) (?:visa |work permit |any )?sponsorship\b',
+  '\b(?:we are|we.re) (?:unable|not able) to sponsor\b',
+  '\b(?:visa )?sponsorship (?:is )?not (?:available|offered|provided|possible)\b',
+  '\bno (?:visa )?sponsorship\b',
+  '\b(?:this role|the role|we) (?:does|do|will) not (?:offer|provide) (?:visa )?sponsorship\b',
+  '\bwe (?:cannot|can.t|can not) sponsor\b',
+  '\b(?:applicants|candidates) must not require (?:visa )?sponsorship\b',
+  '\bwithout (?:the need for|requiring) (?:visa )?sponsorship\b',
+  '\bnot (?:able|eligible) to (?:offer|consider) sponsorship\b',
+]
+# 05 section 5.5, positive wording
+offered = [
+  '\bvisa sponsorship (?:is )?(?:available|offered|provided)\b',
+  '\bwe (?:can|are able to|will) sponsor\b',
+  '\bskilled worker (?:visa|sponsorship|route)\b',
+  '\bcertificate of sponsorship\b',
+  '\bhealth and care worker visa\b',
+  '\bsponsorship (?:may be|is) (?:available|considered)\b',
+  '\bwe hold a (?:uk )?sponsor(?:ship)? licen[cs]e\b',
+]
+
+[right_to_work]
+required = [
+  '\b(?:you )?must (?:already )?have (?:the |a |full )?right to work in the uk\b',
+  '\bproof of (?:your )?right to work\b',
+  '\bright to work (?:in the uk )?(?:is )?(?:required|essential)\b',
+  '\beligible to work in the uk\b',
+]
+nationality = [
+  '\buk nationals? only\b',
+  '\bsole uk national\b',
+  '\bbritish citizens?(?: only)?\b',
+  '\bnationality requirements?\b',
+  '\bdual nationals? may not be eligible\b',
+  '\breserved (?:post|role) for uk nationals\b',
+]
+
+[clearance]
+# Level words. "Active / current / held" wording turns a mention into a hard requirement.
+bpss = ['\bbpss\b', '\bbaseline personnel security standard\b']
+ctc = ['\bctc\b', '\bcounter[- ]terrorist check\b']
+sc = ['\bsc\b(?! card)', '\besc\b', '\bsecurity check(?:ed)?\b', '\bsc[- ]cleared\b', '\bsc clearance\b']
+dv = ['\bdv\b', '\bedv\b', '\bdeveloped vetting\b', '\bdv[- ]cleared\b', '\bdv clearance\b']
+npvv = ['\bnppv ?[23]?\b', '\bpolice vetting\b']
+listx = ['\blist x\b']
+active = [
+  '\b(?:active|current|live|valid|existing) (?:uk )?(?:sc|esc|dv|edv|ctc|bpss|security)(?: |-)?(?:clearance|cleared|vetting|check)?\b',
+  '\b(?:sc|dv|edv|esc|ctc)[- ]cleared\b',
+  '\bmust (?:already )?(?:hold|have|possess) (?:an? )?(?:active |current |valid )?(?:sc|dv|edv|esc|ctc|security) ?(?:clearance|vetting)\b',
+  '\b(?:holding|hold) (?:active |current )?(?:sc|dv) clearance\b',
+]
+eligible = [
+  '\b(?:eligible|eligibility) (?:for|to (?:obtain|gain|achieve)) (?:sc|dv|ctc|bpss|security)\b',
+  '\bwilling(?:ness)? to (?:undergo|obtain|go through) (?:sc|dv|ctc|bpss|security)\b',
+  '\b(?:5|five|10|ten) years.? (?:continuous )?uk residency\b',
+  '\babl(?:e|ity) to (?:obtain|gain) (?:sc|dv|security) clearance\b',
+]
+
+[dbs]
+any = [
+  '\b(?:basic|standard|enhanced) dbs\b',
+  '\bdbs (?:check|clearance|disclosure|update service)\b',
+  '\bsubject to (?:a )?satisfactory (?:enhanced )?dbs\b',
+  '\bbarred list\b',
+  '\bregulated activity\b',
+  '\bsafer recruitment\b',
+  '\bkcsie\b',
+  '\bpvg\b', '\bprotecting vulnerable groups\b', '\bdisclosure scotland\b', '\baccessni\b',
+  '\bexempt from the rehabilitation of offenders act\b',
+]
+
+[driving]
+licence = [
+  '\bfull (?:clean )?(?:uk )?driving licen[cs]e\b',
+  '\bclean (?:uk )?(?:driving )?licen[cs]e\b',
+  '\bdriving licen[cs]e (?:is )?(?:essential|required)\b',
+  '\bno more than \d+ points\b',
+  '\bown (?:vehicle|car|transport)\b',
+  '\baccess to a (?:vehicle|car)\b',
+  '\bbusiness (?:car )?insurance\b',
+]
+vocational = [
+  '\bcat(?:egory)? c(?:\+e|1)?\b', '\bclass [12]\b', '\bhgv\b', '\b7\.5 ?t(?:onne)?\b', '\bdriver cpc\b',
+  '\bdigi(?:tal tachograph)? card\b', '\badr\b', '\bcscs card\b', '\bsia licen[cs]e\b', '\bforklift licen[cs]e\b',
+  '\bipaf\b', '\bpasma\b', '\bgas safe\b', '\b18th edition\b',
+]
+
+[ir35]
+inside = [
+  '\binside ir35\b', '\bir35:? ?inside\b', '\bdeemed inside\b',
+  '\bumbrella only\b', '\bvia (?:an? )?umbrella\b', '\bpaye ?/ ?umbrella\b', '\bpaye or umbrella\b',
+]
+outside = ['\boutside (?:of )?ir35\b', '\bir35:? ?outside\b', '\bltd ?/ ?umbrella\b', '\blimited company\b']
+undetermined = ['\bir35 (?:tbc|tbd|to be confirmed)\b', '\bdetermination pending\b', '\bstatus to be confirmed\b']
+
+[contract]
+permanent = ['\bpermanent\b', '\bperm\b', '\btemp to perm\b']
+contract = ['\bcontract(?:or)? role\b', '\b\d+ ?(?:month|week)s? contract\b', '\binitial \d+ ?months?\b',
+            '\binterim\b', '\bfreelance\b', '\bday rate\b']
+fixed_term = ['\bfixed[- ]term\b', '\bftc\b', '\bmaternity (?:cover|leave)\b', '\bsecondment\b']
+temporary = ['\btemporary\b', '\btemp\b', '\bongoing temp\b', '\bbank (?:staff|role|nurse|shifts?)\b', '\blocum\b',
+             '\bcasual\b', '\bzero[- ]hours?\b']
+part_time = ['\bpart[- ]time\b', '\b\d+(?:\.\d+)? hours (?:per|a) week\b', '\b0\.\d+ fte\b', '\bjob share\b',
+             '\bterm[- ]time only\b', '\btto\b']
+apprenticeship = ['\bapprenticeship\b', '\blevel [2-7] apprentice\b']
+internship = ['\binternship\b', '\bplacement year\b', '\bgraduate scheme\b']
+
+[work_mode]
+remote = ['\bfully remote\b', '\bremote[- ]first\b', '\b(?:uk )?remote\b', '\bremote (?:\(uk\)|within the uk)\b',
+          '\bhome[- ]based\b', '\bwork from home\b', '\bwfh\b']
+hybrid = ['\bhybrid\b', '\b\d (?:days?|times) (?:a|per) week (?:in|on)[- ](?:the )?(?:office|site)\b',
+          '\b\d days? (?:on[- ]site|in the office)\b', '\bagile working\b']
+office = ['\boffice[- ]based\b', '\bon[- ]site\b', '\bsite[- ]based\b', '\bfield[- ]based\b',
+          '\bin the office (?:5|five) days\b', '\bmust live within commut(?:able|ing) distance\b']
+
+[salary]
+not_stated = ['\bcompetitive(?: salary| package| rates?)?\b', '\bdoe\b', '\bdepend(?:ing|ent) (?:up)?on experience\b',
+              '\bnegotiable\b', '\bmarket rate\b', '\battractive package\b', '\bexcellent package\b',
+              '\bsalary on application\b']
+day_rate = ['£\s?\d{2,4}(?:\.\d{2})? ?(?:per day|p/?d\b|/ ?day\b|a day\b|daily)', '\bday rate\b']
+hourly = ['£\s?\d{1,3}(?:\.\d{2})? ?(?:per hour|p/?h\b|/ ?hr?\b|an hour\b|hourly)']
+ote = ['\bote\b', '\bon[- ]target earnings\b']
+pro_rata = ['\bpro[- ]rata\b', '\bfte\b']
+
+[urgency]
+immediate_start = ['\bimmediate(?:ly)? (?:start|available)\b', '\bstart asap\b', '\basap start\b',
+                   '\burgent(?:ly)? (?:requirement|required|hiring)\b', '\binterviews? this week\b']
+may_close_early = ['\bmay close early\b', '\b(?:reserve the right|right reserved) to close (?:this|the) (?:vacancy|advert)\b',
+                   '\bhigh (?:number|volume) of applications\b', '\bclose (?:the advert )?early\b',
+                   '\brolling basis\b']
+
+[agency]
+# "Our client" and friends: the advertiser is not the employer (05 section 5.6).
+tells = ['\bour client\b', '\bmy client\b', '\bon behalf of (?:our|a) client\b', '\bhousehold name\b',
+         '\ba (?:leading|well[- ]known|global|award[- ]winning|growing|fast[- ]growing) (?:company|business|firm|organisation|organization|employer|provider)\b',
+         '\bconfidential (?:client|company|employer)\b', '\brecruitment (?:agency|consultancy|business)\b',
+         '\bacting as an? (?:employment )?agency\b']
+# Advertiser names that are recruitment agencies (05 section 1.7). Matched against the company field.
+names = ['\bhays\b', '\bmichael page\b', '\bpage personnel\b', '\brobert walters\b', '\brobert half\b',
+         '\badecco\b', '\brandstad\b', '\bharvey nash\b', '\bsanderson\b', '\bmorson\b', '\bsalt\b',
+         '\bspectrum it\b', '\bpertemps\b', '\bblue arrow\b', '\bstaffline\b', '\breed specialist recruitment\b',
+         '\bnigel frank\b', '\bjames chase\b', '\bcpl\b', '\bcolumbus\b', '\bhackajob\b',
+         '\brecruitment\b', '\brecruiting\b', '\bresourcing\b', '\btalent (?:solutions|partners)\b', '\bstaffing\b']
+
+[pay]
+unpaid = ['\bunpaid\b', '\bvoluntary (?:role|position)\b', '\bexpenses only\b', '\bno salary\b', '\bvolunteer role\b']
+commission_only = ['\bcommission[- ]only\b', '\bcommission based (?:only|role)\b', '\bself[- ]employed (?:sales|agent|consultant)\b',
+                   '\buncapped commission(?:,)? no basic\b', '\bno basic (?:salary|pay)\b']
+scam = ['\bno experience needed,? earn\b', '\bwork from home earning\b', '\bpay (?:for|towards) (?:your )?(?:training|dbs|uniform)\b',
+        '\bregistration fee\b', '\bupfront fee\b']

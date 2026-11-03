@@ -1,0 +1,52 @@
+# agent-tics.txt
+# What this is: habits of the model that writes the draft (Claude). They are the tells a
+# frozen "ChatGPT word list" misses. A Claude-powered skill must check for them on purpose
+# (04 §2.1, §3, §7 step 12). A hit fails voice_lint check 12 (agent fingerprints).
+# Match semantics: one entry per line; lowercase; matched case-insensitively with word
+# boundaries; internal spaces match any run of whitespace. Normalise curly quotes. Apply to
+# every format, including cv-bullets. Some entries overlap with banned-words.txt and
+# banned-phrases.txt on purpose, so the report can say "agent tic" and the model knows to
+# look for the whole family. Report an overlapping hit once, with this label.
+# Several entries are ordinary words ("more like", "steady"). The model must rewrite each
+# hit or be able to say why the sentence needs it. Default to rewriting.
+# Source: 04 §2.1 (Graphite 2026: Claude overuses "matters because" about 132x the human rate,
+# "the single most", and "less like a ___ and more like a ___" about 100x), 04 §3 (Claude's
+# own tics row), 04 §7 step 12, 04 §2.1 (newest-model vocabulary: quietly, matters,
+# dependable, steady).
+#
+# Not literal, so the linter handles it separately (structural):
+#   - "real" or "really" used as an intensifier ("the real work", "real impact").
+#   - A sentence whose job is to explain why the previous sentence was significant. The
+#     literals below catch a few openers; the model catches the rest in its own read.
+#   - Mannered prose in general: an aphorism-shaped closing line per paragraph.
+
+# --- the Graphite-measured Claude set ---
+matters because
+the single most
+less like
+more like
+
+# --- the "matters" family (newest-model vocabulary) ---
+what matters
+that matters
+this matters
+why it matters
+why this matters
+
+# --- adverbs of sincerity and stealth ---
+quietly
+genuinely
+
+# --- announcing the point ---
+here's the thing
+it's worth noting
+it is worth noting
+it's important to note
+worth noting
+is important because
+is significant because
+
+# --- newest-model vocabulary (04 §2.1) ---
+dependable
+steady
+not simply

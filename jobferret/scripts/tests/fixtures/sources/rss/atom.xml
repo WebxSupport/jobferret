@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Synthetic Atom job feed -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Example charity jobs</title>
+  <id>urn:example:charity-jobs</id>
+  <updated>2026-11-02T12:00:00Z</updated>
+  <entry>
+    <title>Data and Impact Officer</title>
+    <link rel="alternate" href="https://careers.example-charity.org.uk/vacancies/77"/>
+    <id>urn:example:77</id>
+    <published>2026-11-02T08:00:00Z</published>
+    <author><name>Example Charity</name></author>
+    <summary>Hybrid, Leeds. £32,000 per annum. This vacancy may close early.</summary>
+  </entry>
+</feed>

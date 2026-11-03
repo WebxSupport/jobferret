@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:tt="https://teamtailor.com/locations">
+  <channel>
+    <title>Teamtailor</title>
+    <description>Current job openings</description>
+    <link>https://career.teamtailor.com/jobs</link>
+    <item>
+      <title>Solution Architect (Bilingual French/English)</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid=&quot;sc-TJB8qo00&quot; title=&quot;Play: Video&quot; posterquality=&quot;sddefault&quot;&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;&lt;strong&gt;Join us to shape the future!&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Teamtailor is a global Employer Branding and ATS SaaS platform used by over &lt;strong&gt;13,000 companies, 250,000 users&lt;/strong&gt;, and available in &lt;strong&gt;90 countries &lt;/strong&gt;worldwide. 🌍&lt;/p&gt;&lt;p&gt;Working at &lt;a target=&quot;_blank&quot; href=&quot;h...</description>
+      <pubDate>Thu, 29 Oct 2026 13:25:57 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8636263-solution-architect-bilingual-french-english</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>5c189e36-797b-4e58-8540-defb85b3668a</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Stockholm</tt:name>
+          <tt:address>Östgötagatan 16</tt:address>
+          <tt:zip>116 21</tt:zip>
+          <tt:city>Stockholm</tt:city>
+          <tt:country>Sweden</tt:country>
+        </tt:location>
+        <tt:location>
+          <tt:name/>
+          <tt:address>33 Rue La Fayette</tt:address>
+          <tt:zip>75009</tt:zip>
+          <tt:city>Paris</tt:city>
+          <tt:country>France</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Product Specialists</tt:department>
+      <tt:role/>
+      <tt:division/>
+    </item>
+<item>
+      <title>Head of Marketing - North America</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid=&quot;sc-TJB8qo00&quot; title=&quot;Play: Video&quot; posterquality=&quot;sddefault&quot;&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;&lt;strong&gt;Join us to shape the future!&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Teamtailor is a global Employer Branding and ATS SaaS platform used by over 13,000 companies, 250,000 users, and available in 90 countries worldwide. 🌍&lt;/p&gt;&lt;p&gt;Working at &lt;a target=&quot;_blank&quot; href=&quot;https://www.teamtailor.com/en/&quot;&gt;Tea...</description>
+      <pubDate>Wed, 28 Oct 2026 22:13:17 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8633011-head-of-marketing-north-america</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>90fcca34-e34d-4488-b81d-030cbbf256e4</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Chicago</tt:name>
+          <tt:address>125 S Clark St</tt:address>
+          <tt:zip>60603</tt:zip>
+          <tt:city>Chicago</tt:city>
+          <tt:country>United States</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Marketing</tt:department>
+      <tt:role/>
+      <tt:division/>
+    </item>
+  </channel>
+</rss>

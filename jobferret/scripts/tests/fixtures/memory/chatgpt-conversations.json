@@ -1,0 +1,233 @@
+[
+ {
+  "id": "c1",
+  "title": "Budget app",
+  "create_time": 1768035600.0,
+  "update_time": 1768208400.0,
+  "current_node": "u3",
+  "mapping": {
+   "root": {
+    "id": "root",
+    "parent": null,
+    "children": [
+     "s1"
+    ],
+    "message": null
+   },
+   "s1": {
+    "id": "s1",
+    "parent": "root",
+    "children": [
+     "u1"
+    ],
+    "message": {
+     "id": "s1",
+     "author": {
+      "role": "system"
+     },
+     "create_time": 1768035600.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "You are ChatGPT. Excel Excel Excel."
+      ]
+     }
+    }
+   },
+   "u1": {
+    "id": "u1",
+    "parent": "s1",
+    "children": [
+     "a1"
+    ],
+    "message": {
+     "id": "u1",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1768035660.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "I'm building a budgeting app in Python, with SQL/Python and pandas. Email me at jane.smith@example.com or call 07700 900123. My api_key: sk-abcdef1234567890xyz"
+      ]
+     }
+    }
+   },
+   "a1": {
+    "id": "a1",
+    "parent": "u1",
+    "children": [
+     "t1",
+     "u2old",
+     "u2"
+    ],
+    "message": {
+     "id": "a1",
+     "author": {
+      "role": "assistant"
+     },
+     "create_time": 1768035720.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "You should use Tableau and Kubernetes for that."
+      ]
+     }
+    }
+   },
+   "t1": {
+    "id": "t1",
+    "parent": "a1",
+    "children": [],
+    "message": {
+     "id": "t1",
+     "author": {
+      "role": "tool"
+     },
+     "create_time": 1768035750.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "Excel output from a tool run"
+      ]
+     }
+    }
+   },
+   "u2old": {
+    "id": "u2old",
+    "parent": "a1",
+    "children": [],
+    "message": {
+     "id": "u2old",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1768035780.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "I love knitting jumpers for my nan."
+      ]
+     }
+    }
+   },
+   "u2": {
+    "id": "u2",
+    "parent": "a1",
+    "children": [
+     "a2"
+    ],
+    "message": {
+     "id": "u2",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1768125600.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "I enjoy hiking in the Peak District. Card 4111 1111 1111 1111.",
+       {
+        "content_type": "image_asset_pointer",
+        "asset_pointer": "file-xyz"
+       },
+       {
+        "text": "See https://github.com/jane/budget for the Python code."
+       }
+      ]
+     }
+    }
+   },
+   "a2": {
+    "id": "a2",
+    "parent": "u2",
+    "children": [
+     "u3"
+    ],
+    "message": {
+     "id": "a2",
+     "author": {
+      "role": "assistant"
+     },
+     "create_time": 1768125660.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "Machine learning could help."
+      ]
+     }
+    }
+   },
+   "u3": {
+    "id": "u3",
+    "parent": "a2",
+    "children": [],
+    "message": {
+     "id": "u3",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1768208400.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       ""
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": "c2",
+  "title": "Dashboards",
+  "create_time": 1769936400.0,
+  "mapping": {
+   "x2": {
+    "id": "x2",
+    "parent": "x1",
+    "children": [],
+    "message": {
+     "id": "x2",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1770109200.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "Still working on a Power BI dashboard for the finance team, and it uses DAX."
+      ]
+     }
+    }
+   },
+   "x1": {
+    "id": "x1",
+    "parent": null,
+    "children": [
+     "x2"
+    ],
+    "message": {
+     "id": "x1",
+     "author": {
+      "role": "user"
+     },
+     "create_time": 1769936400.0,
+     "content": {
+      "content_type": "text",
+      "parts": [
+       "Can Power BI read from Excel?"
+      ]
+     }
+    }
+   },
+   "x0": {
+    "id": "x0",
+    "parent": null,
+    "children": [],
+    "message": null
+   }
+  }
+ }
+]

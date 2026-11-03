@@ -1,0 +1,56 @@
+{
+ "__note": "Synthetic. Shape from Adzuna's OpenAPI spec (developer.adzuna.com/swagger/spec/test2.json, read 3 Nov 2026).",
+ "count": 3,
+ "mean": 41250.5,
+ "results": [
+  {
+   "id": "5012345678",
+   "adref": "eyJhbGciOiJIUzI1NiJ9.fake.adref",
+   "title": "Data Analyst",
+   "description": "We are looking for a Data Analyst to join our growing insight team in Leeds. You will build dashboards in Power BI and write SQL against our warehouse. Hybrid working, two days a week in the office...",
+   "created": "2026-11-02T08:15:00Z",
+   "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/5012345678?se=AbCdEf&utm_medium=api&utm_source=12345&v=0A1B2C",
+   "latitude": 53.7997,
+   "longitude": -1.5492,
+   "location": {"display_name": "Leeds, West Yorkshire", "area": ["UK", "Yorkshire And The Humber", "West Yorkshire", "Leeds"]},
+   "category": {"label": "IT Jobs", "tag": "it-jobs"},
+   "company": {"display_name": "Northgate Analytics Ltd"},
+   "salary_min": 35000,
+   "salary_max": 42000,
+   "salary_is_predicted": "0",
+   "contract_time": "full_time",
+   "contract_type": "permanent"
+  },
+  {
+   "id": "5012345679",
+   "adref": "eyJhbGciOiJIUzI1NiJ9.fake.adref2",
+   "title": "Senior Data Analyst",
+   "description": "Our client, a leading financial services firm, is seeking a Senior Data Analyst. Immediate start. Competitive salary...",
+   "created": "2026-11-01T10:00:00Z",
+   "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/5012345679?se=XyZ&utm_medium=api&utm_source=12345&v=9F8E",
+   "location": {"display_name": "Bradford, West Yorkshire", "area": ["UK", "Yorkshire And The Humber", "West Yorkshire", "Bradford"]},
+   "category": {"label": "IT Jobs", "tag": "it-jobs"},
+   "company": {"display_name": "Hays"},
+   "salary_min": 44000,
+   "salary_max": 44000,
+   "salary_is_predicted": "1",
+   "contract_time": "full_time"
+  },
+  {
+   "id": "5012345680",
+   "adref": "eyJhbGciOiJIUzI1NiJ9.fake.adref3",
+   "title": "Data Analyst (Fixed Term)",
+   "description": "12 month fixed term contract covering maternity leave. SQL and Excel essential...",
+   "created": "2026-10-30T09:00:00Z",
+   "redirect_url": "https://www.adzuna.co.uk/jobs/land/ad/5012345680?se=QwE&utm_medium=api&utm_source=12345&v=1",
+   "location": {"display_name": "Leeds, West Yorkshire", "area": ["UK", "Yorkshire And The Humber", "West Yorkshire", "Leeds"]},
+   "category": {"label": "IT Jobs", "tag": "it-jobs"},
+   "company": {"display_name": "Leeds Teaching Trust"},
+   "salary_min": 30000,
+   "salary_max": 33000,
+   "salary_is_predicted": "0",
+   "contract_time": "full_time",
+   "contract_type": "contract"
+  }
+ ]
+}
